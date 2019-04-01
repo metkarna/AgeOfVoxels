@@ -1,0 +1,538 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tr",
+				"transform"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"to",
+				"token_name"
+			],
+			[
+				"main",
+				"mainpath"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"cab",
+				"cab_id"
+			],
+			[
+				"cabinet",
+				"cabinet_id"
+			],
+			[
+				"te",
+				"text-transform\tproperty"
+			],
+			[
+				"list",
+				"list-style\tproperty"
+			],
+			[
+				"text",
+				"text-decoration\tproperty"
+			],
+			[
+				"font",
+				"font-style\tproperty"
+			],
+			[
+				"fon",
+				"font-size-adjust\tproperty"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"pass",
+				"pass_1"
+			],
+			[
+				"passw",
+				"password1"
+			],
+			[
+				"flex-",
+				"flex-wrap\tproperty"
+			],
+			[
+				"mysqli",
+				"mysqli_fetch"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/MATTHEW/Unity Projects/AgeOfVoxels/Assets/Scripts"
+	],
+	"file_history":
+	[
+		"/D/MATTHEW/Unity Projects/AgeOfVoxels/Assets/Scripts/UnitSpawner.cs",
+		"/D/MATTHEW/Unity Projects/AgeOfVoxels/Assets/Scripts/Unit.cs",
+		"/D/MATTHEW/Unity Projects/AgeOfVoxels/Assets/Scripts/ArrowController.cs",
+		"/D/MATTHEW/Unity Projects/AgeOfVoxels/AgeOfVoxels.sublime-project",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab1/lab_1.json",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab1/app/Http/Controllers/Lab1APIController.php",
+		"/D/MATTHEW/PROGLANG/Unity Lessons/Уроки/UnityEssential_v2/Unity3DEssentail_3D/Assets/Scripts/PlayerController.cs",
+		"/C/PROGRAMS/OSPanel/domains/lab3/index.php",
+		"/D/MATTHEW/Unity Projects/ageofvoxels/.git/MERGE_MSG",
+		"/C/PROGRAMS/OSPanel/domains/lab3-test/tests/unit/lib/StemmerTest.php",
+		"/C/PROGRAMS/OSPanel/domains/lab3/stem.php",
+		"/C/PROGRAMS/OSPanel/domains/lab3-test/tests/_support/FunctionalTester.php",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab_5-var2.json",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab_5-var1.json",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Back-end/app/Http/Controllers/ClientsController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Front-end/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Back-end/app/Http/Controllers/OrdersController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Back-end/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Front-end/app/Http/Controllers/OrdersController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Front-end/app/Http/Controllers/ClientsController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab555/Frontend/app/Http/Controllers/OrdersController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab555/Frontend/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab555/Backend/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab555/Frontend/app/Http/Controllers/ClientsController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab555/Backend/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab555/Backend/app/Http/Controllers/OrdersController.php",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Back-end/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Front-end/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Back-end/resources/views/welcome.blade.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Front-end/resources/views/welcome.blade.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Frontend/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Frontend/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Frontend/app/Http/Controllers/OrdersController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/config/app.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Frontend/app/Http/Controllers/ClientsController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Backend/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/.env",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab4/app/Http/Controllers/Lab4Controller.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Backend/app/Http/Controllers/ClientsController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Frontend/.env",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Backend/.env",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Common/config/database.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Backend/app/Http/Controllers/OrdersController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/.env.example",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Backend/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Backend/app/Http/Controllers/Controller.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab5/Frontend/config/database.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/app/Http/Controllers/ServicesController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/app/Http/Controllers/OrdersController.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/app/Http/Controllers/ClientsController.php",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab_4.json",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab4/routes/api.php",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab_2.json",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab_2.sql",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab-2.sql",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab_2.json",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/config/database.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab2/config/database.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab_2.sql",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/app/Http/Controllers/ClientController.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/app/Http/Controllers/ServiceController.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/app/Http/Controllers/OrderController.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum/lab2/app/Http/Controllers/Controller.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab1/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab1/config/app.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum-master/lab1/app/Http/Controllers/APIController.php",
+		"/C/PROGRAMS/OSPanel/domains/praktikum-master/lab1/routes/api.php",
+		"/C/PROGRAMS/OSPanel/domains/pract-lab1/app/Http/Controllers/Controller.php",
+		"/C/Users/metka/.gitconfig",
+		"/C/PROGRAMS/OSPanel/domains/lab2/assets/read2.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/assets/read.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/lemma.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/printtable.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/assets/script.js",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/.git/COMMIT_EDITMSG",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/WEB/lab1/.git/COMMIT_EDITMSG",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/WEB/lab1/index.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/index.php",
+		"/C/PROGRAMS/OSPanel/domains/studdb/forms/capacity.js",
+		"/C/PROGRAMS/OSPanel/domains/lab2/assets/printtable.php",
+		"/C/PROGRAMS/OSPanel/domains/studdb/php/cabinet/cabinet_upd.php",
+		"/D/MATTHEW/Unity Projects/Lesson2_3D/Assets/Scripts/CustomMove.cs",
+		"/C/PROGRAMS/OSPanel/domains/lab2/assets/connectdb.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/script.js",
+		"/C/PROGRAMS/OSPanel/domains/studdb/forms/studgroup.php",
+		"/C/PROGRAMS/OSPanel/domains/lab2/text.txt",
+		"/D/MATTHEW/Unity Projects/Lesson2_3D/Assets/Scripts/PlayerController.cs",
+		"/D/MATTHEW/Unity Projects/Lesson2_3D/Assets/Scripts/NavMeshAgentHelper.cs",
+		"/D/MATTHEW/Unity Projects/Age of Voxels ver. 0.1/Assets/Scripts/CameraScript.cs",
+		"/D/MATTHEW/ВУЗ/6 СЕМЕСТР/Проектный практикум/testproject/lab1/server.php",
+		"/C/Users/metka/AppData/Local/Temp/is-PDK0N.tmp/editor-test.txt",
+		"/C/Users/metka/Desktop/Лаб2 Предобработка текста/lemma.php",
+		"/D/MATTHEW/WORK/Все для занятий/Решения/3/3. Carshop/index.html",
+		"/D/MATTHEW/WORK/Все для занятий/Решения/3/3. Carshop/js/script.js",
+		"/D/MATTHEW/WORK/Все для занятий/Решения/3/3. Carshop/css/style.css",
+		"/C/PROGRAMS/OSPanel/domains/lab1/index.php",
+		"/C/PROGRAMS/OSPanel/domains/lab1/style.css",
+		"/C/PROGRAMS/OSPanel/domains/lab1/simple_html_dom.php",
+		"/C/Users/metka/Desktop/Web_ЭИС/Лаб1 Парсинг/simple_html_dom.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/jss/crud-teacher.js",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/phps/connectdb.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/phps/toindex.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/signup.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/signin.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/index.php",
+		"/D/MATTHEW/ВУЗ/2 СЕМЕСТР/InTech/2. Оценки/js/script.js",
+		"/C/PROGRAMS/OSPanel/domains/octopus/cabinets.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/capacity.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/courses.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/groups.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/lessons.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/list.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/pars.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/start.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/students.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/subjects.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/teachers.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/types.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/phps/content/content-header.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/phps/content/content-head.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/config/db.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/classes/Login.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/phps/teacher/teacher_read.php",
+		"/C/PROGRAMS/OSPanel/domains/octopus/assets/phps/content/content-sign-footer.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 160.0,
+		"where_history":
+		[
+			"C:\\PROGRAMS\\OSPanel\\domains\\praktikum-master\\lab1",
+			"C:\\PROGRAMS\\OSPanel\\domains\\octopus\\assets",
+			"C:\\PROGRAMS\\OSPanel\\domains\\octopus"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pre",
+			"<pre",
+			"pre",
+			"http://127.0.0.1:8000/",
+			"http://admin.127.0.0.1:8002/",
+			"/admin.127.0.0.1:8002/",
+			"http://admin.127.0.0.1:8002/",
+			"http://127.0.0.1:8001/",
+			"name",
+			"api/services",
+			"fullname",
+			"/api/clients",
+			"digit_text",
+			"digit_text()",
+			"table",
+			"filtered from",
+			"studgroup/studgroup",
+			"lesson/lesson",
+			"student/student",
+			"studgroup/studgroup",
+			"type/type",
+			"course/course",
+			"teacher/teacher",
+			"matching records",
+			"No matching records found",
+			"group/group",
+			"student/student",
+			"/assets/phps/teacher/teacher",
+			"_fnGetColumns",
+			"visibleColumns",
+			"teacher/teacher",
+			"queries",
+			"include_once \"content-",
+			"content-",
+			"function draw()",
+			"draw()",
+			"index.html",
+			"search",
+			"records per page",
+			"per page",
+			"showing ",
+			" entries",
+			"Showing to of entries",
+			"records per page",
+			"search",
+			"records per page",
+			"show",
+			"showing",
+			"Showing",
+			"Showing ",
+			"sInfoEmpty",
+			"showing",
+			"crt",
+			"lesson/lesson",
+			"crt",
+			"as",
+			"lesson/lesson",
+			"crt",
+			"for=\"name\"",
+			"studgroup/studgroup",
+			"student/student",
+			");\n",
+			"studgroup/studgroup",
+			"teacher/teacher",
+			"subject/subject",
+			"type/type",
+			"course/course",
+			"cabinet/cabinet",
+			"Название",
+			"course/course",
+			".d",
+			".d-",
+			".d-n",
+			"d-",
+			"d-n",
+			"d",
+			"d-",
+			"d-none",
+			"/*------------------------------------------------------------------",
+			"js",
+			"js-scrollbar1",
+			"'Open Sans'",
+			"restart",
+			"toolbar",
+			"green",
+			"#toolbar",
+			"#toolbarbutton0",
+			"toolbarbutton0",
+			"titletext",
+			"toolbarbg",
+			"divadbox1",
+			"bigsum",
+			"']],\n",
+			"title",
+			"imgFile",
+			"user",
+			"username",
+			"STATUS_DELETED",
+			"username",
+			"h2",
+			"// ",
+			"password",
+			"username"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"http://admin.127.0.0.1:8003/",
+			"http://admin.127.0.0.1:8002/",
+			"fullname",
+			"api/clients",
+			"name",
+			"/api/services",
+			"/api/orders",
+			"list/list",
+			"capacity/capacity",
+			"lesson/lesson",
+			"para/para",
+			"subject/subject",
+			"type/type",
+			"cabinet/cabinet",
+			"studgroup/studgroup",
+			"group/group",
+			"/assets/phps/student/student",
+			"course/course",
+			"include_once \"assets/phps/content/content-",
+			"assets/phps/content/content-",
+			"index.php",
+			"upd",
+			"list/list",
+			"upd",
+			"AS",
+			"capacity/capacity",
+			"upd",
+			"",
+			"lesson/lesson",
+			"student/student",
+			"studgroup/studgroup",
+			"para/para",
+			"teacher/teacher",
+			"subject/subject",
+			"type/type",
+			"course/course",
+			"Наименование",
+			"cabinet/cabinet",
+			"\"Century Gothic\"",
+			"productname",
+			"imgFile2",
+			"product",
+			"productname",
+			"STATUS_UNACTIVE",
+			"email",
+			"h3",
+			"pass",
+			"login"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 64.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "",
+	"project": "AgeOfVoxels.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 232.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
