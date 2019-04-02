@@ -16,7 +16,7 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     private callMe callAction;
     #endregion
 
-    #region PlantClickCaledMethods
+    #region PlantClickCalledMethods
     // запланировать выполнение метода buildTower при нажатии на кнопку
     public void BuildTowerClick() => callAction = BuildTower;
 
@@ -33,7 +33,7 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     }
     #endregion
 
-    #region CastleClickCaledMethods
+    #region CastleClickCalledMethods
     // запланировать выполнение метода CreateUnit при нажатии на кнопку
     public void CastleMenuClick() => callAction = CreateUnit;
 
@@ -48,12 +48,27 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     }
     #endregion
 
+    #region EndGameClickCalledMethods
+    // запланировать выполнение метода EndGame при нажатии на кнопку
+    public void EndGameClick() => callAction = EndGame;
+
+    // Закрыть меню паузы
+    private void EndGame()
+    {
+        Time.timeScale = 1; 
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        ui.isFrozen = false;
+        ui.endGameMenu.SetActive(false);
+    }
+    #endregion
+
     // Реализация интерфейса IPointerClickHandler, метод получает имя нажатой кнопки
     // и вызывает запланированный метод
     public void OnPointerClick(PointerEventData eventData)
     {           
         _eventData = eventData.pointerCurrentRaycast.gameObject.transform.parent.name;
-        callAction();       
+        callAction();
+        Debug.Log(_eventData);       
     }
 
 }
