@@ -12,6 +12,7 @@ TagManager:
   - building-menu
   - Archer_place
   - playerCastle
+  - endGameMessage
   layers:
   - Default
   - TransparentFX

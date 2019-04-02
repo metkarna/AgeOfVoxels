@@ -13,11 +13,17 @@ public class Castle : MonoBehaviour
         
         if (collision.gameObject.tag == Enemy_Tag)
         {
+        	// Уничтожаем персонажа
             Destroy(collision.gameObject);
             Castle_Hitpoint--;
             if (Castle_Hitpoint == 0)
             {
-                Destroy(gameObject);
+            	// Уничтожаем базу
+            	var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+            	string msg = gameObject.tag == "castle" ? "Победа :)": "Поражение :(";
+            	ui.CastleDestroy(msg);
+            	Destroy(gameObject);
+                // Заканчиваем игру
             }
         }
     }

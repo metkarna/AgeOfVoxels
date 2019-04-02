@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -10,6 +11,7 @@ public class UIController : MonoBehaviour
     public GameObject towerPlant;
     public GameObject buyUnitsMenu;
     public GameObject pauseGameMenu;
+    public GameObject endGameMenu;
     public bool isFrozen = false;
 
     // Получаем нажатый элемент и проверяем можно ли вызывать меню (!isFrozen)
@@ -32,11 +34,6 @@ public class UIController : MonoBehaviour
                 {
                     PlayerCastleClick();
                 }
-                // else if (clickedObject.GetComponent<Collider>().Raycast(ray, out hit, Mathf.Infinity) &&
-                //     clickedObject.CompareTag("castle"))
-                // {
-                //     EndGameClick();
-                // }
             }
         }
     }
@@ -48,14 +45,17 @@ public class UIController : MonoBehaviour
         Debug.Log("castleMenu");
     }
 
-    // Если кликнули на замок - активируем его меню и замораживаем возможность вызова интерфейса
-    // private void PauseGameClick()
-    // {
-    //     Time.timeScale = 0;
-    //     pauseGameMenu.SetActive(true);
-    //     isFrozen = true;
-    //     Debug.Log("endGameMenu");
-    // }
+    // Если замок уничтожен, вызываем окошко конца игры.
+    // Передаем нужное сообщение (победа или поражение)
+    public void CastleDestroy(string msg)
+    { 
+        Time.timeScale = 0;
+        isFrozen = true;
+        Debug.Log(msg);
+        endGameMenu.SetActive(true);
+        GameObject.FindGameObjectWithTag("endGameMessage").GetComponent<Text>().text = msg;
+        Debug.Log("endGameMenu");
+    }
 
     // Если кликнули на плент - активируем его меню и замораживаем возможность вызова интерфейса
     private void TowerPlantClick(RaycastHit hit)
