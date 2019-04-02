@@ -20,11 +20,14 @@ public class Melee : Unit
     // Update is called once per frame
     void Update()
     {
-        if (!InBattle)
+        if (enemy_castle != null)
         {
-            navMesh.SetDestination(enemy_castle.transform.position);
+            if (!InBattle)
+            {
+                navMesh.SetDestination(enemy_castle.transform.position);
+            }
         }
-
+        
         if (_gameObject != null)
         {
             if (Vector3.Distance(transform.position, _gameObject.transform.position) < seeDistance)

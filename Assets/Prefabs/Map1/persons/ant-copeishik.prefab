@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 8702782213000883901}
   m_Layer: 0
   m_Name: ant-copeishik
-  m_TagString: Untagged
+  m_TagString: hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,4 +691,4 @@ MonoBehaviour:
   _tag: enemy
   coolDown: 1
   InBattle: 0
-  EnemyTag: 
+  EnemyTag: castle
