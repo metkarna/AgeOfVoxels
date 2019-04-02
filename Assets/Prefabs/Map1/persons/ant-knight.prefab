@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 4929989901342144263}
   m_Layer: 0
   m_Name: ant-knight
-  m_TagString: hero
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +636,6 @@ MonoBehaviour:
   _tag: enemy
   coolDown: 1
   InBattle: 0
-  EnemyTag: castle
 --- !u!1 &1819270752
 GameObject:
   m_ObjectHideFlags: 0

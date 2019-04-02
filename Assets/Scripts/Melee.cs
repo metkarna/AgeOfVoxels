@@ -27,7 +27,7 @@ public class Melee : Unit
                 navMesh.SetDestination(enemy_castle.transform.position);
             }
         }
-        
+
         if (_gameObject != null)
         {
             if (Vector3.Distance(transform.position, _gameObject.transform.position) < seeDistance)
