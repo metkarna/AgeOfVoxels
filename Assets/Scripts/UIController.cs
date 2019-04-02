@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     //private bool builtActive = false;
     public GameObject towerPlant;
     public GameObject buyUnitsMenu;
-    public GameObject endGameMenu;
+    public GameObject pauseGameMenu;
     public bool isFrozen = false;
 
     // Получаем нажатый элемент и проверяем можно ли вызывать меню (!isFrozen)
@@ -32,11 +32,11 @@ public class UIController : MonoBehaviour
                 {
                     PlayerCastleClick();
                 }
-                else if (clickedObject.GetComponent<Collider>().Raycast(ray, out hit, Mathf.Infinity) &&
-                    clickedObject.CompareTag("castle"))
-                {
-                    EndGameClick();
-                }
+                // else if (clickedObject.GetComponent<Collider>().Raycast(ray, out hit, Mathf.Infinity) &&
+                //     clickedObject.CompareTag("castle"))
+                // {
+                //     EndGameClick();
+                // }
             }
         }
     }
@@ -49,13 +49,13 @@ public class UIController : MonoBehaviour
     }
 
     // Если кликнули на замок - активируем его меню и замораживаем возможность вызова интерфейса
-    private void EndGameClick()
-    {
-        Time.timeScale = 0;
-        endGameMenu.SetActive(true);
-        isFrozen = true;
-        Debug.Log("endGameMenu");
-    }
+    // private void PauseGameClick()
+    // {
+    //     Time.timeScale = 0;
+    //     pauseGameMenu.SetActive(true);
+    //     isFrozen = true;
+    //     Debug.Log("endGameMenu");
+    // }
 
     // Если кликнули на плент - активируем его меню и замораживаем возможность вызова интерфейса
     private void TowerPlantClick(RaycastHit hit)
