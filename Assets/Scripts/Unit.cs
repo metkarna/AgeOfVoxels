@@ -35,7 +35,7 @@ public class Unit : MonoBehaviour
                 distance = Vector3.Distance(transform.position, item.transform.position);
                 _gameObject = item;
                 target = item.transform;
-                InBattle = true;
+                //InBattle = true;
                 
             }
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44800496, g: 0.4980091, b: 0.57550776, a: 1}
+  m_IndirectSpecularColor: {r: 0.44800508, g: 0.49800915, b: 0.5755077, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ant-archer
       objectReference: {fileID: 0}
+    - target: {fileID: 863550720, guid: 641cc5d198b228040a8f466c4957c598, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 863550725, guid: 641cc5d198b228040a8f466c4957c598, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.2412
@@ -309,7 +313,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 22459042}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.381
+  m_Radius: 0.56
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -318,8 +322,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2.286
-  m_BaseOffset: 1.143
+  m_Height: 2.06
+  m_BaseOffset: 0.02
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1001 &25038957
@@ -794,6 +798,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ant-axes
       objectReference: {fileID: 0}
+    - target: {fileID: 1493400966, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_TagString
+      value: hero
+      objectReference: {fileID: 0}
     - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.206844
@@ -843,6 +851,16 @@ PrefabInstance:
       propertyPath: _tag
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4307889144413840037, guid: 6b19ccb502fd3414f94865725f628bcc,
+        type: 3}
+      propertyPath: EnemyTag
+      value: castle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307889144413840037, guid: 6b19ccb502fd3414f94865725f628bcc,
+        type: 3}
+      propertyPath: seeDistance
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
 --- !u!4 &105914794 stripped
@@ -850,6 +868,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc,
     type: 3}
   m_PrefabInstance: {fileID: 105914793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &135874795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826922992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &137773002
 PrefabInstance:
@@ -2473,6 +2497,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1495016786}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &377583663 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93,
+    type: 3}
+  m_PrefabInstance: {fileID: 1454496192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &401279983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3452,6 +3482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ant-knight
       objectReference: {fileID: 0}
+    - target: {fileID: 1689267306, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_TagString
+      value: hero
+      objectReference: {fileID: 0}
     - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.397903
@@ -3500,6 +3534,16 @@ PrefabInstance:
         type: 3}
       propertyPath: _tag
       value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: EnemyTag
+      value: castle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: seeDistance
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
@@ -3862,7 +3906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1689267306, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_TagString
-      value: hero
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3911,7 +3955,25 @@ PrefabInstance:
     - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
         type: 3}
       propertyPath: _tag
-      value: enemy
+      value: hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: EnemyTag
+      value: playerCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: seeDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267313, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_Radius
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267313, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_Height
+      value: 2.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
@@ -6887,11 +6949,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1854650220, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
       propertyPath: m_TagString
-      value: hero
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854650220, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.02
+      value: -4.97
       objectReference: {fileID: 0}
     - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6899,7 +6965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6933,10 +6999,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854650221, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8702782213000883901, guid: f5f44851b9934894596a5e33f4c090f1,
         type: 3}
       propertyPath: _tag
-      value: enemy
+      value: hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702782213000883901, guid: f5f44851b9934894596a5e33f4c090f1,
+        type: 3}
+      propertyPath: EnemyTag
+      value: playerCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702782213000883901, guid: f5f44851b9934894596a5e33f4c090f1,
+        type: 3}
+      propertyPath: InBattle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8702782213000883901, guid: f5f44851b9934894596a5e33f4c090f1,
+        type: 3}
+      propertyPath: seeDistance
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
@@ -7597,6 +7690,8 @@ Transform:
   - {fileID: 628489891}
   - {fileID: 105914794}
   - {fileID: 14291002}
+  - {fileID: 377583663}
+  - {fileID: 135874795}
   m_Father: {fileID: 1012268710}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8011,6 +8106,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1434066781}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1454496192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1344744679}
+    m_Modifications:
+    - target: {fileID: 1689267306, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_Name
+      value: ant-knight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267306, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1.2246467e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -7.498799e-33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: _tag
+      value: hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: EnemyTag
+      value: playerCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929989901342144263, guid: 618c871ea223e2e4a9d244eb80170b93,
+        type: 3}
+      propertyPath: seeDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267313, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_Radius
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689267313, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+      propertyPath: m_Height
+      value: 2.06
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
 --- !u!1001 &1456607475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10130,6 +10309,87 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1820217274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1826922992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1344744679}
+    m_Modifications:
+    - target: {fileID: 1493400966, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_Name
+      value: ant-axes (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400966, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_TagString
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493400971, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307889144413840037, guid: 6b19ccb502fd3414f94865725f628bcc,
+        type: 3}
+      propertyPath: _tag
+      value: hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307889144413840037, guid: 6b19ccb502fd3414f94865725f628bcc,
+        type: 3}
+      propertyPath: EnemyTag
+      value: playerCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307889144413840037, guid: 6b19ccb502fd3414f94865725f628bcc,
+        type: 3}
+      propertyPath: seeDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307889144413840037, guid: 6b19ccb502fd3414f94865725f628bcc,
+        type: 3}
+      propertyPath: attackDistance
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
 --- !u!1001 &1828408769
 PrefabInstance:
   m_ObjectHideFlags: 0

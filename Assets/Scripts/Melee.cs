@@ -7,12 +7,13 @@ public class Melee : Unit
 {
 
     private NavMeshAgent navMesh;
+    public string EnemyTag;
     private GameObject enemy_castle;
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
-        enemy_castle = GameObject.FindGameObjectWithTag("castle");
+        enemy_castle = GameObject.FindGameObjectWithTag(EnemyTag);
         navMesh = GetComponent<NavMeshAgent>();
     }
 
@@ -28,10 +29,10 @@ public class Melee : Unit
         {
             if (Vector3.Distance(transform.position, _gameObject.transform.position) < seeDistance)
             {
+                InBattle = true;
                 if (Vector3.Distance(transform.position, _gameObject.transform.position) > attackDistance)
                 {
-                    transform.LookAt(_gameObject.transform);
-                    transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+                    navMesh.SetDestination(_gameObject.transform.position);
                     _anim.SetBool("Walk", true);
                 }
                 else
@@ -48,10 +49,14 @@ public class Melee : Unit
                     }
                 }
             }
+            else
+            {
+                //InBattle = false;
+            }
         }
         else
         {
-            InBattle = false;
+            //InBattle = false;
             distance = 1000f;
             _anim.SetBool("Hit", false);
             _anim.SetBool("Walk", true);
@@ -66,7 +71,7 @@ public class Melee : Unit
                         distance = Vector3.Distance(transform.position, item.transform.position);
                         _gameObject = item;
                         target = item.transform;
-                        InBattle = true;
+                        //InBattle = true;
                     }
                 }
             }
