@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System;
 
 public class ButtonHandler : MonoBehaviour, IPointerClickHandler
@@ -48,17 +49,40 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     }
     #endregion
 
-    #region EndGameClickCalledMethods
-    // запланировать выполнение метода EndGame при нажатии на кнопку
-    public void EndGameClick() => callAction = EndGame;
-
+    #region PauseGameClickCalledMethods
+    // запланировать выполнение метода OpenPauseGame при нажатии на кнопку
+    public void OpenPauseMenuClick() => callAction = OpenPauseGame;
+    // запланировать выполнение метода ClosePauseGame при нажатии на кнопку
+    public void ClosePauseMenuClick() => callAction = ClosePauseGame;
+    // Открыть меню паузы
+    private void OpenPauseGame()
+    {
+        Time.timeScale = 0; 
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        ui.isFrozen = true;
+        ui.pauseGameMenu.SetActive(true);
+    }
     // Закрыть меню паузы
-    private void EndGame()
+    private void ClosePauseGame()
     {
         Time.timeScale = 1; 
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = false;
-        ui.endGameMenu.SetActive(false);
+        ui.pauseGameMenu.SetActive(false);
+    }
+    #endregion
+
+    #region MenuClickCalledMethods
+    // запланировать выполнение метода OpenMenu при нажатии на кнопку
+    public void OpenMenuClick() => callAction = OpenMenu;
+    // Открыть меню уровней( или чего там у нас??????)
+    private void OpenMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        Time.timeScale = 0; 
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        ui.isFrozen = true;
+        ui.pauseGameMenu.SetActive(true);
     }
     #endregion
 
