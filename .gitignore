@@ -37,3 +37,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#Settings
+ProjectSettings/ProjectVersion.txt
+
