@@ -32,11 +32,13 @@ public class Melee : Unit
                 InBattle = true;
                 if (Vector3.Distance(transform.position, _gameObject.transform.position) > attackDistance)
                 {
+                    navMesh.isStopped = false;
                     navMesh.SetDestination(_gameObject.transform.position);
                     _anim.SetBool("Walk", true);
                 }
                 else
                 {
+                    navMesh.isStopped = true;
                     if (AttackTimer > 0)
                         AttackTimer -= Time.deltaTime;
 
@@ -51,12 +53,13 @@ public class Melee : Unit
             }
             else
             {
-                //InBattle = false;
+                InBattle = false;
             }
         }
         else
         {
-            //InBattle = false;
+            InBattle = false;
+            navMesh.isStopped = false;
             distance = 1000f;
             _anim.SetBool("Hit", false);
             _anim.SetBool("Walk", true);
@@ -71,7 +74,6 @@ public class Melee : Unit
                         distance = Vector3.Distance(transform.position, item.transform.position);
                         _gameObject = item;
                         target = item.transform;
-                        //InBattle = true;
                     }
                 }
             }
