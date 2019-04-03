@@ -44,8 +44,12 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = false;
         ui.buyUnitsMenu.SetActive(false);
-        var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
-        unitSpawner.SpawnUnits(_eventData); 
+        var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        if (goldController.BuyUnit(_eventData))
+        {
+            var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
+            unitSpawner.SpawnUnits(_eventData);
+        }
     }
     #endregion
 
@@ -57,7 +61,7 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     // Открыть меню паузы
     private void OpenPauseGame()
     {
-        Time.timeScale = 0; 
+        Time.timeScale = 0;
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = true;
         ui.pauseGameMenu.SetActive(true);
@@ -65,7 +69,7 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     // Закрыть меню паузы
     private void ClosePauseGame()
     {
-        Time.timeScale = 1; 
+        Time.timeScale = 1;
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = false;
         ui.pauseGameMenu.SetActive(false);
@@ -79,7 +83,7 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     private void OpenMenu()
     {
         SceneManager.LoadScene("Menu");
-        Time.timeScale = 0; 
+        Time.timeScale = 0;
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = true;
         ui.pauseGameMenu.SetActive(true);
@@ -89,10 +93,10 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     // Реализация интерфейса IPointerClickHandler, метод получает имя нажатой кнопки
     // и вызывает запланированный метод
     public void OnPointerClick(PointerEventData eventData)
-    {           
+    {
         _eventData = eventData.pointerCurrentRaycast.gameObject.transform.parent.name;
         callAction();
-        Debug.Log(_eventData);       
+        Debug.Log(_eventData);
     }
 
 }

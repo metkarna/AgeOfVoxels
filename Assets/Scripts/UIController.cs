@@ -12,7 +12,25 @@ public class UIController : MonoBehaviour
     public GameObject buyUnitsMenu;
     public GameObject pauseGameMenu;
     public GameObject endGameMenu;
+    public GameObject goldUI;
+    public Text goldValue;
     public bool isFrozen = false;
+
+
+    private Player player;
+
+    private void Start()
+    {
+        goldValue = goldUI.GetComponent<Text>();
+        SetUnitsPrice();
+        Debug.Log("value is inited");
+        player = GameObject.FindObjectOfType(typeof(Player)) as Player;
+    }
+
+    private void SetUnitsPrice()
+    {
+       
+    }
 
     // Получаем нажатый элемент и проверяем можно ли вызывать меню (!isFrozen)
     void Update()
@@ -36,7 +54,15 @@ public class UIController : MonoBehaviour
                 }
             }
         }
+        RenewPlayerGoldText();
     }
+
+    private void RenewPlayerGoldText()
+    {
+        goldValue.text = "Золото: " + player.Gold.ToString();
+
+    }
+
     // Если кликнули на замок - активируем его меню и замораживаем возможность вызова интерфейса
     private void PlayerCastleClick()
     {
@@ -48,7 +74,7 @@ public class UIController : MonoBehaviour
     // Если замок уничтожен, вызываем окошко конца игры.
     // Передаем нужное сообщение (победа или поражение)
     public void CastleDestroy(string msg)
-    { 
+    {
         Time.timeScale = 0;
         isFrozen = true;
         Debug.Log(msg);
@@ -66,5 +92,5 @@ public class UIController : MonoBehaviour
         isFrozen = true;
         Debug.Log("towerMenu");
     }
-    
+
 }
