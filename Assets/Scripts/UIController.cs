@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
     public GameObject pauseGameMenu;
     public GameObject endGameMenu;
     public GameObject goldUI;
-    public Text goldValue;
+    private Text goldValue;
     public bool isFrozen = false;
 
 
@@ -60,7 +60,6 @@ public class UIController : MonoBehaviour
     private void RenewPlayerGoldText()
     {
         goldValue.text = "Золото: " + player.Gold.ToString();
-
     }
 
     // Если кликнули на замок - активируем его меню и замораживаем возможность вызова интерфейса

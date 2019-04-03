@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44800484, g: 0.49800873, b: 0.5755077, a: 1}
+  m_IndirectSpecularColor: {r: 0.44800496, g: 0.4980091, b: 0.57550776, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6659,7 +6659,6 @@ MonoBehaviour:
   pauseGameMenu: {fileID: 90857983}
   endGameMenu: {fileID: 1996097186}
   goldUI: {fileID: 2012382176}
-  goldValue: {fileID: 0}
   isFrozen: 0
 --- !u!114 &1012268714
 MonoBehaviour:
@@ -6675,7 +6674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lumberjack: {fileID: 1493400966, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
   archer: {fileID: 863550720, guid: 641cc5d198b228040a8f466c4957c598, type: 3}
-  spearman: {fileID: 22459042}
+  spearman: {fileID: 1854650220, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
   swordsman: {fileID: 1689267306, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
 --- !u!114 &1012268715
 MonoBehaviour:
@@ -6686,7 +6685,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012268709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c0a618d4069d6428fdefcee277565e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e1911053e3252a47a95b893c22b3d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1012268716
@@ -6698,7 +6697,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1012268709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294b7d1373b85234ca2ed2351b030323, type: 3}
+  m_Script: {fileID: 11500000, guid: 69a0806379b461b4c8126c2a782c0b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 1
@@ -9492,7 +9491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.35
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9500,7 +9499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.77
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 1689267307, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12668,7 +12667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy_Tag: hero
-  Castle_Hitpoint: 1
+  Castle_Hitpoint: 4
 --- !u!54 &1973833770
 Rigidbody:
   m_ObjectHideFlags: 0
