@@ -34,16 +34,33 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     }
     #endregion
 
-    #region CastleClickCalledMethods
+    #region OpenBuyUnitsClickCalledMethods
     // запланировать выполнение метода CreateUnit при нажатии на кнопку
-    public void CastleMenuClick() => callAction = CreateUnit;
+    public void BuyUnitClick() => callAction = CreateUnit;
+    // запланировать выполнение метода OpenBuyUnitsGame при нажатии на кнопку
+    public void OpenBuyUnitsMenuClick() => callAction = OpenBuyUnitsGame;
+    // запланировать выполнение метода CloseBuyUnitsGame при нажатии на кнопку
+    public void CloseBuyUnitsMenuClick() => callAction = CloseBuyUnitsGame;
+    // Открыть меню покупки
+    private void OpenBuyUnitsGame()
+    {
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        //ui.isFrozen = true;
+        ui.buyUnitsMenu.SetActive(true);
+    }
+    // Закрыть меню покупки
+    private void CloseBuyUnitsGame()
+    {
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        //ui.isFrozen = false;
+        ui.buyUnitsMenu.SetActive(false);
+    }
 
-    // Вызвать создание юнита и выключить меню
+    // Вызвать создание юнита
     private void CreateUnit()
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
-        ui.isFrozen = false;
-        ui.buyUnitsMenu.SetActive(false);
+        //ui.isFrozen = false;
         var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
         if (goldController.BuyUnit(_eventData))
         {

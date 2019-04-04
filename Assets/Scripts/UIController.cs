@@ -47,11 +47,6 @@ public class UIController : MonoBehaviour
                 {
                     TowerPlantClick(hit);
                 }
-                else if (clickedObject.GetComponent<Collider>().Raycast(ray, out hit, Mathf.Infinity) &&
-                    clickedObject.CompareTag("playerCastle"))
-                {
-                    PlayerCastleClick();
-                }
             }
         }
         RenewPlayerGoldText();
@@ -60,14 +55,6 @@ public class UIController : MonoBehaviour
     private void RenewPlayerGoldText()
     {
         goldValue.text = "Золото: " + player.Gold.ToString();
-    }
-
-    // Если кликнули на замок - активируем его меню и замораживаем возможность вызова интерфейса
-    private void PlayerCastleClick()
-    {
-        buyUnitsMenu.SetActive(true);
-        isFrozen = true;
-        Debug.Log("castleMenu");
     }
 
     // Если замок уничтожен, вызываем окошко конца игры.
