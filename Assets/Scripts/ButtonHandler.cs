@@ -34,30 +34,29 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     }
     #endregion
 
-    #region OpenBuyUnitsClickCalledMethods
-    // запланировать выполнение метода CreateUnit при нажатии на кнопку
-    public void BuyUnitClick() => callAction = CreateUnit;
-    // запланировать выполнение метода OpenBuyUnitsGame при нажатии на кнопку
-    public void OpenBuyUnitsMenuClick() => callAction = OpenBuyUnitsGame;
-    // запланировать выполнение метода CloseBuyUnitsGame при нажатии на кнопку
-    public void CloseBuyUnitsMenuClick() => callAction = CloseBuyUnitsGame;
+    #region OpenBuyUnitsRedClickCalledMethods
+    // Покупка и спавн героев игроком
+    // запланировать выполнение метода CreateUnit, OpenBuyUnitsMenuClick, CloseBuyUnitsGame при нажатии на кнопку
+    public void BuyUnitClickRed() => callAction = CreateUnitRed;
+    public void OpenBuyUnitsMenuClickRed() => callAction = OpenBuyUnitsGameRed;
+    public void CloseBuyUnitsMenuClickRed() => callAction = CloseBuyUnitsGameRed;
     // Открыть меню покупки
-    private void OpenBuyUnitsGame()
+    private void OpenBuyUnitsGameRed()
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         //ui.isFrozen = true;
-        ui.buyUnitsMenu.SetActive(true);
+        ui.buyUnitsMenuRed.SetActive(true);
     }
     // Закрыть меню покупки
-    private void CloseBuyUnitsGame()
+    private void CloseBuyUnitsGameRed()
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         //ui.isFrozen = false;
-        ui.buyUnitsMenu.SetActive(false);
+        ui.buyUnitsMenuRed.SetActive(false);
     }
 
     // Вызвать создание юнита
-    private void CreateUnit()
+    private void CreateUnitRed()
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         //ui.isFrozen = false;
@@ -65,8 +64,43 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
         if (goldController.BuyUnit(_eventData))
         {
             var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
-            unitSpawner.SpawnUnits(_eventData);
+            unitSpawner.SpawnUnitsRed(_eventData);
         }
+    }
+    #endregion
+
+    #region OpenBuyUnitsBlueClickCalledMethods
+    // Покупка и спавн героев противником
+    // запланировать выполнение метода CreateUnit, OpenBuyUnitsMenuClick, CloseBuyUnitsGame при нажатии на кнопку
+    public void BuyUnitClickBlue() => callAction = CreateUnitBlue;
+    public void OpenBuyUnitsMenuClickBlue() => callAction = OpenBuyUnitsGameBlue;
+    public void CloseBuyUnitsMenuClickBlue() => callAction = CloseBuyUnitsGameBlue;
+    // Открыть меню покупки
+    private void OpenBuyUnitsGameBlue()
+    {
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        //ui.isFrozen = true;
+        ui.buyUnitsMenuBlue.SetActive(true);
+    }
+    // Закрыть меню покупки
+    private void CloseBuyUnitsGameBlue()
+    {
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        //ui.isFrozen = false;
+        ui.buyUnitsMenuBlue.SetActive(false);
+    }
+
+    // Вызвать создание юнита (без учета денег)
+    private void CreateUnitBlue()
+    {
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        //ui.isFrozen = false;
+        // var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        // if (goldController.BuyUnit(_eventData))
+        // {
+            var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
+            unitSpawner.SpawnUnitsBlue(_eventData);
+        // }
     }
     #endregion
 

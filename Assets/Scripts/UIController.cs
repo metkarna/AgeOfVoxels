@@ -9,7 +9,8 @@ public class UIController : MonoBehaviour
     public GameObject buildMenu;
     //private bool builtActive = false;
     public GameObject towerPlant;
-    public GameObject buyUnitsMenu;
+    public GameObject buyUnitsMenuRed;
+    public GameObject buyUnitsMenuBlue;
     public GameObject pauseGameMenu;
     public GameObject endGameMenu;
     public GameObject goldUI;
