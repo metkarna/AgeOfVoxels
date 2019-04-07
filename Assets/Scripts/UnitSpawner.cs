@@ -6,7 +6,8 @@ public class UnitSpawner : MonoBehaviour
 {
     #region Fields
     // Точка появления
-    private Vector3 spawnPoint = new Vector3(41, 0.82f, 54);
+    // Сделал паблик для тестов
+    public Vector3 spawnPoint = new Vector3(-20, 0.82f, 48);
     // Ссылки на копируемые объекты
     public GameObject lumberjack;
     public GameObject archer;
