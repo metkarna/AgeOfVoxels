@@ -60,12 +60,12 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         //ui.isFrozen = false;
-        var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
-        if (goldController.BuyUnit(_eventData))
-        {
+        // var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        // if (goldController.BuyUnit(_eventData))
+        // {
             var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
             unitSpawner.SpawnUnitsRed(_eventData);
-        }
+        //}
     }
     #endregion
 
@@ -124,6 +124,19 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = false;
         ui.pauseGameMenu.SetActive(false);
+    }
+    #endregion
+
+
+    #region PauseGameClickCalledMethods
+    // запланировать выполнение метода ClosePauseGame при нажатии на кнопку
+    public void CloseBuyTowersMenuClick() => callAction = CloseBuyTowersMenuGame;
+    // Закрыть меню покупки башен
+    private void CloseBuyTowersMenuGame()
+    {
+        var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+        ui.isFrozen = false;
+        ui.buildMenu.SetActive(false);
     }
     #endregion
 

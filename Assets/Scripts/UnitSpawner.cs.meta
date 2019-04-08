@@ -3,7 +3,15 @@ guid: f6435690da32e5f43b9f5c8840a89ec4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lumberjackRed: {fileID: 1493400966, guid: 6b19ccb502fd3414f94865725f628bcc, type: 3}
+  - archerRed: {fileID: 863550720, guid: 641cc5d198b228040a8f466c4957c598, type: 3}
+  - spearmanRed: {fileID: 1854650220, guid: f5f44851b9934894596a5e33f4c090f1, type: 3}
+  - swordsmanRed: {fileID: 1689267306, guid: 618c871ea223e2e4a9d244eb80170b93, type: 3}
+  - lumberjackBlue: {fileID: 1493400966, guid: 53411051ecbb8ac4fb10f53122cac363, type: 3}
+  - archerBlue: {fileID: 863550720, guid: a4899567b376ea54794f8c8f5b4b97c9, type: 3}
+  - spearmanBlue: {fileID: 1854650220, guid: 3b0d724f3cddedd48a3b16a0d2f9a85e, type: 3}
+  - swordsmanBlue: {fileID: 1689267306, guid: c6eb68c8b69ae0147b33fadc196e134b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

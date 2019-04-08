@@ -8,7 +8,7 @@ public class UnitSpawner : MonoBehaviour
     // Точка появления
     // Сделал паблик для тестов
     public Vector3 spawnPointRed = new Vector3(-20, 0.82f, 48);
-    public Vector3 spawnPointBlue = new Vector3(-20, 0.82f, 48);
+    public Vector3 spawnPointBlue = new Vector3(-20, 0.82f, -48);
     // Ссылки на копируемые объекты для игрока
     public GameObject lumberjackRed;
     public GameObject archerRed;
@@ -69,7 +69,6 @@ public class UnitSpawner : MonoBehaviour
                 Debug.Log("мечник");
                 Instantiate(swordsmanBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
                 break;
-
         }
     }
 
