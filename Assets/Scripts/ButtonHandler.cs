@@ -26,9 +26,16 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         ui.isFrozen = false;
-        GameObject plant = ui.towerPlant;
-        var towerSpawner = GameObject.FindObjectOfType(typeof(TowerSpawner)) as TowerSpawner;
-        towerSpawner.SpawnTowerRed(_eventData, plant);
+        
+
+        var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        if (goldController.BuyTower(_eventData))
+        {
+            GameObject plant = ui.towerPlant;
+            var towerSpawner = GameObject.FindObjectOfType(typeof(TowerSpawner)) as TowerSpawner;
+            towerSpawner.SpawnTowerRed(_eventData, plant);
+        }
+
         ui.buildMenu.SetActive(false);
         Debug.Log("tower tryed build ");
     }
@@ -60,12 +67,12 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         //ui.isFrozen = false;
-        // var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
-        // if (goldController.BuyUnit(_eventData))
-        // {
+         var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+         if (goldController.BuyUnit(_eventData))
+         {
             var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
             unitSpawner.SpawnUnitsRed(_eventData);
-        //}
+        }
     }
     #endregion
 

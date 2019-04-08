@@ -61,6 +61,29 @@ public class GoldConroller : MonoBehaviour
         // </ДУБЛИРОВАНИЕ КОДА ИЗ UNITSPAWNER>
         return GoldTransaction(cost);
     }
+    public bool BuyTower(string typeOfTower)
+    {
+        var cost = 0;
+        // <ДУБЛИРОВАНИЕ КОДА ИЗ TowerSPAWNER>
+        switch (typeOfTower)
+        {
+            case "antiqueBaracsTowerButton":
+                Debug.Log("Куплен барак");
+                cost = (int)TowerCosts.Barac;
+                break;
+            case "antiqueBattleTowerButton":
+                Debug.Log("Куплена боевая башня ");
+                cost = (int)TowerCosts.Battle;
+                break;
+            case "antiqueAvanpostTowerButton":
+                Debug.Log("Куплен аванпост");
+                cost = (int)TowerCosts.Avanpost;
+                break;
+
+        }
+        // </ДУБЛИРОВАНИЕ КОДА ИЗ UNITSPAWNER>
+        return GoldTransaction(cost);
+    }
     private bool GoldTransaction(int cost)
     {
         if (cost <= player.Gold)
@@ -71,4 +94,5 @@ public class GoldConroller : MonoBehaviour
         else return false;
     }
     private enum UnitCosts { Lumberjack = 30, Archer = 100, Spearman = 50, Swordsman = 70 }
+    private enum TowerCosts { Barac = 100, Battle = 100, Avanpost = 100}
 }
