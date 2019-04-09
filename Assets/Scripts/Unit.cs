@@ -13,6 +13,7 @@ public class Unit : MonoBehaviour
     public string _tag;
     public float coolDown;
     public bool InBattle;
+    public string UnitName;
 
     protected float distance = 1000f;
     protected Transform target;

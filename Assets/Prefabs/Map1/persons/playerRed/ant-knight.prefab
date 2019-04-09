@@ -637,6 +637,7 @@ MonoBehaviour:
   _tag: enemy
   coolDown: 1
   InBattle: 0
+  UnitName: Swordsman
   EnemyTag: castle
 --- !u!54 &4280771086227804592
 Rigidbody:

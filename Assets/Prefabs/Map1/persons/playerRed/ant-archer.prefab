@@ -163,6 +163,7 @@ MonoBehaviour:
   _tag: enemy
   coolDown: 2
   InBattle: 0
+  UnitName: Archer
   arrowPrefab: {fileID: 225478631040696896, guid: 37dbd144f4921bc4d86ed6d6bba23ff0,
     type: 3}
 --- !u!54 &4129013380865016833

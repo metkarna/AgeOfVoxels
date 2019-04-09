@@ -140,6 +140,7 @@ MonoBehaviour:
   _tag: enemy
   coolDown: 1
   InBattle: 0
+  UnitName: Lumberjack
   EnemyTag: castle
 --- !u!195 &1493400973
 NavMeshAgent:

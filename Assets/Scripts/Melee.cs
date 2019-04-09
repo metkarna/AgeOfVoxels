@@ -9,12 +9,14 @@ public class Melee : Unit
     private NavMeshAgent navMesh;
     public string EnemyTag;
     private GameObject enemy_castle;
+    private GoldConroller goldConroller;
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
         enemy_castle = GameObject.FindGameObjectWithTag(EnemyTag);
         navMesh = GetComponent<NavMeshAgent>();
+        goldConroller = FindObjectOfType(typeof(GoldConroller)) as GoldConroller; 
     }
 
     // Update is called once per frame
@@ -93,6 +95,11 @@ public class Melee : Unit
         else
         {
             Destroy(gameObject);
+            if ((string)data[0] == "hero")
+            {
+                goldConroller.KillTrophy(UnitName);
+            }
+            
         }
     }
 
