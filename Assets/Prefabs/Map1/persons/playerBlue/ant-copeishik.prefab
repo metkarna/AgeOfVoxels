@@ -731,5 +731,6 @@ MonoBehaviour:
   _tag: hero
   coolDown: 2
   InBattle: 0
+  UnitName: Spearman
   arrowPrefab: {fileID: 973237971945973918, guid: b697d2df2b52f244ab03cdd7ca78def0,
     type: 3}

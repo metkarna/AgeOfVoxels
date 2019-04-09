@@ -95,4 +95,34 @@ public class GoldConroller : MonoBehaviour
     }
     private enum UnitCosts { Lumberjack = 30, Archer = 100, Spearman = 50, Swordsman = 70 }
     private enum TowerCosts { Barac = 100, Battle = 100, Avanpost = 100}
+
+    public void KillTrophy(string KillObjectName)
+    {
+        switch (KillObjectName)
+        {
+            case "Archer":
+                {
+                    player.Gold += 25;
+                    break;
+                }
+            case "Lumberjack":
+                {
+                    player.Gold += 10;
+                    break;
+                }
+            case "Spearman":
+                {
+                    player.Gold += 15;
+                    break;
+                }
+            case "Swordsman":
+                {
+                    player.Gold += 20;
+                    break;
+                }
+            default:
+                break;
+        }
+        //player.Gold += 100;
+    }
 }

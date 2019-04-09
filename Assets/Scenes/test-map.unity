@@ -789,12 +789,12 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -8320,6 +8320,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: aqueduct-0 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109622084953828984, guid: 668f0641efcfcf14d8d354558017793c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4697325837077990585, guid: 668f0641efcfcf14d8d354558017793c,
         type: 3}

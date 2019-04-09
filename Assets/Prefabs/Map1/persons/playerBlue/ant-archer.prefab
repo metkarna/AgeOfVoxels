@@ -163,6 +163,7 @@ MonoBehaviour:
   _tag: hero
   coolDown: 2
   InBattle: 0
+  UnitName: Archer
   arrowPrefab: {fileID: 225478631040696896, guid: 2553fbaa266a11541855f6db3e6d9204,
     type: 3}
 --- !u!54 &4129013380865016833
