@@ -206,7 +206,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 69597843}
-        m_MethodName: BuyUnitClickRed
+        m_MethodName: OpenSceneClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -418,7 +418,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 181726414}
-        m_MethodName: BuyUnitClickRed
+        m_MethodName: OpenSceneClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 810836254}
   - component: {fileID: 810836253}
   m_Layer: 5
-  m_Name: btnToMenu
+  m_Name: btnGoToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 810836253}
-        m_MethodName: OpenMenuClick
+        m_MethodName: OpenSceneClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1220,7 +1220,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7f39f51f358d1654a9ac6ed9a3148982, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cef063a5b13d56849b2d0b200371543f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1294,7 +1294,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03065341a291a2d4bb6a61169bc67810, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 35f200289b828af43978310ac832464d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
