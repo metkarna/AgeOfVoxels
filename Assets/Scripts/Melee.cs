@@ -94,7 +94,10 @@ public class Melee : Unit
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            _anim.Play("Death");
+             Destroy (gameObject, this.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
             if ((string)data[0] == "hero")
             {
                 goldConroller.KillTrophy(UnitName);

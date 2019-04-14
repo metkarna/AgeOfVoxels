@@ -58,7 +58,10 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            _anim.SetBool("Death", true);
+            //_anim.SetBool("Death", true);
+            this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            _anim.Play("Death");
+             Destroy (gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
             //OnAnimatorMove();
             //_anim.Play(animDie.name);
             //Destroy(this.gameObject, animDie.length);

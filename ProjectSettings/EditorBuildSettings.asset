@@ -8,19 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Map1-1.unity
-    guid: e9d6a88bc36a65d46851807edb0c8b0c
-  - enabled: 1
-    path: Assets/Scenes/Levels.unity
-    guid: 69d295267c3817741810aa43cb39b0c2
-  - enabled: 1
-    path: Assets/Scenes/test-map.unity
-    guid: 734d2ef3db953924cb65922eeb286536
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: d5223cb01c8e87e409ca3bf14b6a15d6
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: dbbc4ee3640979b41b41a7d1a7b40e95
+  - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: 69d295267c3817741810aa43cb39b0c2
+  - enabled: 1
+    path: Assets/Scenes/test-map.unity
+    guid: 734d2ef3db953924cb65922eeb286536
   m_configObjects: {}

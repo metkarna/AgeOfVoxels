@@ -122,6 +122,7 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
             case "level-test":
                 Debug.Log("Открытие сцены: Тестовый уровень");
                 SceneManager.LoadScene("test-map");
+                Time.timeScale = 1;
                 break;
             case "level 1":
                 Debug.Log("Открытие сцены: Уровень Map1-1");
@@ -141,8 +142,8 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
                 break;
             case "btnExit":
                 Debug.Log("Закрытие игры");
-                UnityEditor.EditorApplication.isPlaying = false;
-                //Application.Quit();
+                //UnityEditor.EditorApplication.isPlaying = false;
+                Application.Quit();
                 break;                
         }
     }

@@ -123,7 +123,10 @@ public class Distant : Unit
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            _anim.Play("Death");
+             Destroy (gameObject, this.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         }
     }
 
