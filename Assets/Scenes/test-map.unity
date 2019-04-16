@@ -2055,7 +2055,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041C\u0435\u0447\u043D\u0438\u043A"
+  m_Text: "\u0410\u0432\u0430\u043D\u043F\u043E\u0441\u0442"
 --- !u!222 &375448750
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8118,7 +8118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043F\u0435\u0439\u0449\u0438\u043A"
+  m_Text: "\u0411\u043E\u0435\u0432\u0430\u044F \u0431\u0430\u0448\u043D\u044F\n"
 --- !u!222 &1362148142
 CanvasRenderer:
   m_ObjectHideFlags: 0
