@@ -631,14 +631,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   health: 5
-  seeDistance: 50
+  seeDistance: 25
   attackDistance: 5
   speed: 3
   _tag: hero
   coolDown: 1
   InBattle: 0
   UnitName: Swordsman
-  EnemyTag: playerCastle
+  EnemyCastleTag: playerCastle
 --- !u!54 &4280771086227804592
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -134,14 +134,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   health: 5
-  seeDistance: 50
+  seeDistance: 25
   attackDistance: 5
   speed: 3
   _tag: hero
   coolDown: 1
   InBattle: 0
   UnitName: Lumberjack
-  EnemyTag: playerCastle
+  EnemyCastleTag: playerCastle
 --- !u!195 &1493400973
 NavMeshAgent:
   m_ObjectHideFlags: 0

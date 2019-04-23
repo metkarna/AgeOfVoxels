@@ -7,16 +7,20 @@ public class Melee : Unit
 {
 
     private NavMeshAgent navMesh;
-    public string EnemyTag;
+    public string EnemyCastleTag;
     private GameObject enemy_castle;
     private GoldConroller goldConroller;
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
-        enemy_castle = GameObject.FindGameObjectWithTag(EnemyTag);
+        enemy_castle = GameObject.FindGameObjectWithTag(EnemyCastleTag);
         navMesh = GetComponent<NavMeshAgent>();
-        goldConroller = FindObjectOfType(typeof(GoldConroller)) as GoldConroller; 
+        goldConroller = FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        if (!InBattle)
+        {
+            navMesh.SetDestination(enemy_castle.transform.position);
+        }
     }
 
     // Update is called once per frame
@@ -26,7 +30,13 @@ public class Melee : Unit
         {
             if (!InBattle)
             {
-                navMesh.SetDestination(enemy_castle.transform.position);
+                if (navMesh.isActiveAndEnabled)
+                {
+                    if (navMesh.isStopped)
+                    {
+                        navMesh.isStopped = false;
+                    }
+                }
             }
         }
 
@@ -37,13 +47,12 @@ public class Melee : Unit
                 InBattle = true;
                 if (Vector3.Distance(transform.position, _gameObject.transform.position) > attackDistance)
                 {
-                    navMesh.isStopped = false;
-                    navMesh.SetDestination(_gameObject.transform.position);
+                    //transform.Translate(new Vector3(0, 0, 0));
                     _anim.SetBool("Walk", true);
                 }
                 else
                 {
-                    navMesh.isStopped = true;
+                    transform.LookAt(_gameObject.transform);
                     if (AttackTimer > 0)
                         AttackTimer -= Time.deltaTime;
 
@@ -59,12 +68,18 @@ public class Melee : Unit
             else
             {
                 InBattle = false;
+                if (navMesh.isActiveAndEnabled)
+                {
+                    if (navMesh.isStopped)
+                    {
+                        navMesh.isStopped = false;
+                    }
+                }
             }
         }
         else
         {
             InBattle = false;
-            navMesh.isStopped = false;
             distance = 1000f;
             _anim.SetBool("Hit", false);
             _anim.SetBool("Walk", true);
@@ -111,5 +126,12 @@ public class Melee : Unit
         _anim.SetBool("Hit", true);
         _gameObject.SendMessage("DealDamage", data);
         AttackTimer = coolDown;
+        if (navMesh.isActiveAndEnabled)
+        {
+            if (!navMesh.isStopped)
+            {
+                navMesh.isStopped = true;
+            }
+        }
     }
 }

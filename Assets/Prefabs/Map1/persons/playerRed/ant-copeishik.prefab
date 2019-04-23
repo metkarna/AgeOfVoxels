@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 1854650222}
   - component: {fileID: 1575821447313899966}
   - component: {fileID: 8416440480939315461}
-  - component: {fileID: 482633599671041821}
+  - component: {fileID: 6610322980632377476}
   m_Layer: 0
   m_Name: ant-copeishik
   m_TagString: hero
@@ -711,7 +711,7 @@ NavMeshAgent:
   m_BaseOffset: 0.02
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &482633599671041821
+--- !u!114 &6610322980632377476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -720,17 +720,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854650220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf711a94b64362640a12f90a30718b58, type: 3}
+  m_Script: {fileID: 11500000, guid: 521761a82128bd145b6fd545fce951d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
   health: 5
-  seeDistance: 50
-  attackDistance: 50
+  seeDistance: 25
+  attackDistance: 10
   speed: 3
   _tag: enemy
   coolDown: 2
   InBattle: 0
   UnitName: Spearman
-  arrowPrefab: {fileID: 973237971945973918, guid: 25a49871b8f00be45b67cd08991e5632,
-    type: 3}
+  EnemyCastleTag: castle

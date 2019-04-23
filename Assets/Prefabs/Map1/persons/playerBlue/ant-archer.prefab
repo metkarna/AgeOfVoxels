@@ -157,8 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   health: 5
-  seeDistance: 50
-  attackDistance: 50
+  seeDistance: 25
+  attackDistance: 20
   speed: 3
   _tag: hero
   coolDown: 2
@@ -166,6 +166,7 @@ MonoBehaviour:
   UnitName: Archer
   arrowPrefab: {fileID: 225478631040696896, guid: 2553fbaa266a11541855f6db3e6d9204,
     type: 3}
+  EnemyCastleTag: playerCastle
 --- !u!54 &4129013380865016833
 Rigidbody:
   m_ObjectHideFlags: 0

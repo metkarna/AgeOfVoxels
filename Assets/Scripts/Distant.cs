@@ -15,37 +15,55 @@ public class Distant : Unit
     private Transform towertarget;
 
     private NavMeshAgent navMesh;
+    public string EnemyCastleTag;
     private GameObject enemy_castle;
+
+    private GoldConroller goldConroller;
 
     // Start is called before the first frame update
     new void Start()
     {
         base.Start();
 
-        enemy_castle = GameObject.FindGameObjectWithTag("castle");
+        enemy_castle = GameObject.FindGameObjectWithTag(EnemyCastleTag);
         navMesh = GetComponent<NavMeshAgent>();
+        goldConroller = FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        if (!InBattle)
+        {
+            navMesh.SetDestination(enemy_castle.transform.position);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!InBattle)
+        if (enemy_castle != null)
         {
-            navMesh.SetDestination(enemy_castle.transform.position);
+            if (!InBattle)
+            {
+                if (navMesh.isActiveAndEnabled)
+                {
+                    if (navMesh.isStopped)
+                    {
+                        navMesh.isStopped = false;
+                    }
+                }
+            }
         }
 
         if (_gameObject != null)
         {
             if (Vector3.Distance(transform.position, _gameObject.transform.position) < seeDistance)
             {
+                InBattle = true;
                 if (Vector3.Distance(transform.position, _gameObject.transform.position) > attackDistance)
                 {
-                    transform.LookAt(_gameObject.transform);
-                    transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+                    //transform.Translate(new Vector3(0, 0, 0));
                     _anim.SetBool("Walk", true);
                 }
                 else
                 {
+                    transform.LookAt(_gameObject.transform);
                     if (AttackTimer > 0)
                         AttackTimer -= Time.deltaTime;
 
@@ -55,6 +73,17 @@ public class Distant : Unit
                     if (AttackTimer == 0)
                     {
                         Attack();
+                    }
+                }
+            }
+            else
+            {
+                InBattle = false;
+                if (navMesh.isActiveAndEnabled)
+                {
+                    if (navMesh.isStopped)
+                    {
+                        navMesh.isStopped = false;
                     }
                 }
             }
@@ -81,7 +110,7 @@ public class Distant : Unit
                 }
                 if (_gameObject != null)
                 {
-                    transform.LookAt(_gameObject.transform);
+                   // transform.LookAt(_gameObject.transform);
                 }
             }
         }
@@ -127,12 +156,23 @@ public class Distant : Unit
             this.gameObject.GetComponent<NavMeshAgent>().enabled = false;
             _anim.Play("Death");
              Destroy (gameObject, this.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+            if ((string)data[0] == "hero")
+            {
+                goldConroller.KillTrophy(UnitName);
+            }
         }
     }
 
     private void Attack()
     {
         // Переделать
+        if (navMesh.isActiveAndEnabled)
+        {
+            if (!navMesh.isStopped)
+            {
+                navMesh.isStopped = true;
+            }
+        }
         transform.LookAt(_gameObject.transform);
         _anim.SetBool("Hit", true);
         _gameObject.SendMessage("DealDamage", data);
