@@ -41,13 +41,14 @@ public class Distant : Unit
         {
             if (!InBattle)
             {
-                if (navMesh.isActiveAndEnabled)
+                /*if (navMesh.isActiveAndEnabled)
                 {
                     if (navMesh.isStopped)
                     {
                         navMesh.isStopped = false;
                     }
-                }
+                }*/
+                navMesh.speed = 3.5f;
             }
         }
 
@@ -59,7 +60,9 @@ public class Distant : Unit
                 if (Vector3.Distance(transform.position, _gameObject.transform.position) > attackDistance)
                 {
                     //transform.Translate(new Vector3(0, 0, 0));
+                    
                     _anim.SetBool("Walk", true);
+                    navMesh.speed = 3.5f;
                 }
                 else
                 {
@@ -79,13 +82,14 @@ public class Distant : Unit
             else
             {
                 InBattle = false;
-                if (navMesh.isActiveAndEnabled)
+                /*if (navMesh.isActiveAndEnabled)
                 {
                     if (navMesh.isStopped)
                     {
                         navMesh.isStopped = false;
                     }
-                }
+                }*/
+                navMesh.speed = 3.5f;
             }
         }
         else
@@ -166,13 +170,14 @@ public class Distant : Unit
     private void Attack()
     {
         // Переделать
-        if (navMesh.isActiveAndEnabled)
+        /*if (navMesh.isActiveAndEnabled)
         {
             if (!navMesh.isStopped)
             {
                 navMesh.isStopped = true;
             }
-        }
+        }*/
+        navMesh.speed = 0;
         transform.LookAt(_gameObject.transform);
         _anim.SetBool("Hit", true);
         _gameObject.SendMessage("DealDamage", data);

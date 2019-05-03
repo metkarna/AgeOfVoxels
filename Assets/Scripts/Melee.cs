@@ -30,13 +30,14 @@ public class Melee : Unit
         {
             if (!InBattle)
             {
-                if (navMesh.isActiveAndEnabled)
+                /*if (navMesh.isActiveAndEnabled)
                 {
                     if (navMesh.isStopped)
                     {
                         navMesh.isStopped = false;
                     }
-                }
+                }*/
+                navMesh.speed = 3.5f;
             }
         }
 
@@ -49,9 +50,12 @@ public class Melee : Unit
                 {
                     //transform.Translate(new Vector3(0, 0, 0));
                     _anim.SetBool("Walk", true);
+                    navMesh.speed = 3.5f;
                 }
                 else
                 {
+                    _anim.SetBool("Walk", false);
+                    _anim.SetBool("Hit", true);
                     transform.LookAt(_gameObject.transform);
                     if (AttackTimer > 0)
                         AttackTimer -= Time.deltaTime;
@@ -68,13 +72,14 @@ public class Melee : Unit
             else
             {
                 InBattle = false;
-                if (navMesh.isActiveAndEnabled)
+                /*if (navMesh.isActiveAndEnabled)
                 {
                     if (navMesh.isStopped)
                     {
                         navMesh.isStopped = false;
                     }
-                }
+                }*/
+                navMesh.speed = 3.5f;
             }
         }
         else
@@ -123,15 +128,16 @@ public class Melee : Unit
 
     private void Attack()
     {
-        _anim.SetBool("Hit", true);
+        
         _gameObject.SendMessage("DealDamage", data);
         AttackTimer = coolDown;
-        if (navMesh.isActiveAndEnabled)
+        navMesh.speed = 0;
+        /*if (navMesh.isActiveAndEnabled)
         {
             if (!navMesh.isStopped)
             {
                 navMesh.isStopped = true;
             }
-        }
+        }*/
     }
 }
