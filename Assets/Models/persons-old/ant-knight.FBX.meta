@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 660389cc0d0961c4195da87148638348
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ant-knight-hand1
+    100004: ant-knight-hand2
+    100006: ant-knight-head
+    100008: ant-knight-leg1
+    100010: ant-knight-leg2
+    100012: ant-knight-weapon
+    400000: //RootNode
+    400002: ant-knight-hand1
+    400004: ant-knight-hand2
+    400006: ant-knight-head
+    400008: ant-knight-leg1
+    400010: ant-knight-leg2
+    400012: ant-knight-weapon
+    2100000: ant-knight-3_palette
+    2100002: ant-knight-6_palette
+    2100004: ant-knight-2_palette
+    2100006: palette
+    2100008: ant-knight-5_palette
+    2100010: ant-knight-1_palette
+    2100012: ant-knight-4_palette
+    2300000: //RootNode
+    2300002: ant-knight-hand1
+    2300004: ant-knight-hand2
+    2300006: ant-knight-head
+    2300008: ant-knight-leg1
+    2300010: ant-knight-leg2
+    2300012: ant-knight-weapon
+    3300000: //RootNode
+    3300002: ant-knight-hand1
+    3300004: ant-knight-hand2
+    3300006: ant-knight-head
+    3300008: ant-knight-leg1
+    3300010: ant-knight-leg2
+    3300012: ant-knight-weapon
+    4300000: ant-knight
+    4300002: ant-knight-head
+    4300004: ant-knight-hand2
+    4300006: ant-knight-weapon
+    4300008: ant-knight-hand1
+    4300010: ant-knight-leg1
+    4300012: ant-knight-leg2
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
