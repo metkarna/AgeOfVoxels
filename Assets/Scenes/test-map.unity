@@ -1256,81 +1256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250217536}
   m_CullTransparentMesh: 0
---- !u!1001 &293268097
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 945790907}
-    m_Modifications:
-    - target: {fileID: 8543324133126054002, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_Name
-      value: tower-plant
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -43.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c8a9267f9e57a6946b85a1104f669e23, type: 3}
---- !u!4 &293268098 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
-    type: 3}
-  m_PrefabInstance: {fileID: 293268097}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &295436953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,7 +2249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28ef8c68bade09b41aca258d42a632f2, type: 3}
   m_Name: 
@@ -2382,7 +2307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0fc92df40f11ef4580117f5dcb05857, type: 3}
   m_Name: 
@@ -3991,7 +3916,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 293268098}
   - {fileID: 1571417133}
   - {fileID: 2058301875}
   m_Father: {fileID: 1012268710}
@@ -4469,11 +4393,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079170a24421d1d4d9258b4787e9b99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleTower: {fileID: 3519874132925994235, guid: 59cf2a211b75a4445ae0b9b554411b9a,
+  battleTower: {fileID: 3207392569022651533, guid: 2210feb5ccd32354eafea46c59da94a9,
     type: 3}
-  baracsTower: {fileID: 2212622382783159496, guid: 78c03306fc955ad488fe4e539a6992da,
+  baracsTower: {fileID: 5203726300705425154, guid: ae68593ca149a9245bd2f61f10a9d725,
     type: 3}
-  avanpostTower: {fileID: 803993892593374578, guid: f2c7315184df17548b208431d5f88e34,
+  avanpostTower: {fileID: 5531270718735936937, guid: 3b90bd6884e7e154387a119f79c8597e,
     type: 3}
 --- !u!114 &1012268712
 MonoBehaviour:
