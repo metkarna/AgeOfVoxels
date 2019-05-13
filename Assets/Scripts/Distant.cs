@@ -98,7 +98,7 @@ public class Distant : Unit
             distance = 1000f;
             _anim.SetBool("Hit", false);
             _anim.SetBool("Walk", true);
-            _Objects = GameObject.FindGameObjectsWithTag(_tag);
+            _Objects = GameObject.FindGameObjectsWithTag(enemyTag);
             if (_Objects != null || _Objects.Length > 0)
             {
                 foreach (var item in _Objects)

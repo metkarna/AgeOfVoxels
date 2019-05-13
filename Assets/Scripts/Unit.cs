@@ -10,7 +10,7 @@ public class Unit : MonoBehaviour
     public float seeDistance;
     public float attackDistance;
     public float speed;
-    public string _tag;
+    public string enemyTag;
     public float coolDown;
     public bool InBattle;
     public string UnitName;
@@ -28,7 +28,7 @@ public class Unit : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
-        _Objects = GameObject.FindGameObjectsWithTag(_tag);
+        _Objects = GameObject.FindGameObjectsWithTag(enemyTag);
         foreach (var item in _Objects)
         {
             if (distance > Vector3.Distance(transform.position, item.transform.position))
@@ -43,7 +43,7 @@ public class Unit : MonoBehaviour
 
         _anim = GetComponent<Animator>();
         data = new object[2];
-        data[0] = _tag;
+        data[0] = enemyTag;
         data[1] = damage;
     }
 

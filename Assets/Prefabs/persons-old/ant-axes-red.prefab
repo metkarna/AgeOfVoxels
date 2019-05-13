@@ -493,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 5107933363672607933}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5107933363672838299}
   - {fileID: 5107933363672838297}
@@ -636,11 +636,11 @@ MonoBehaviour:
   seeDistance: 25
   attackDistance: 5
   speed: 3
-  _tag: enemy
+  enemyTag: enemy
   coolDown: 1
   InBattle: 0
   UnitName: Lumberjack
-  EnemyCastleTag: castle
+  EnemyCastleTag: enemyCastle
 --- !u!1 &5107933363672607935
 GameObject:
   m_ObjectHideFlags: 0
