@@ -8,11 +8,11 @@ public class Player : MonoBehaviour
 {
     public int Gold { get; set; }
 
-    private string gameID = "voxel-ripwnaxrzeupnavbur7rlw";
+    private string gameID = "ageofvoxels-rngqg9j7r06969qdooho7w";
 
-    private List<Message> msgList = new List<Message>(); //  Messsage queue implementation
+    public List<Message> msgList = new List<Message>(); //  Messsage queue implementation
     private bool joinedroom = false;
-    private Connection pioconnection;
+    public Connection pioconnection;
     private string infomsg = "";
 
 
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
                 client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
 
                 Debug.Log("CreateJoinRoom");
-                //Create or join the room 
+                //Create or join the room (Создаем и/или сразу входим в комнату)
                 client.Multiplayer.CreateJoinRoom(
                     "UnityDemoRoom",                    //Room id. If set to null a random roomid is used
                     "UnityMushrooms",                   //The room type started on the server
@@ -75,6 +75,23 @@ public class Player : MonoBehaviour
         );
 
         Gold = defaultGoldValue;
+    }
+
+    void FixedUpdate() {
+        // process message queue
+        /*foreach (Message m in msgList) {
+            switch (m.Type) {
+                case "PlayerJoined":
+                    GameObject newplayer = GameObject.Instantiate(target) as GameObject;
+                    newplayer.transform.position = new Vector3(m.GetFloat(1), 0, m.GetFloat(2));
+                    newplayer.name = m.GetString(0);
+                    newplayer.transform.Find("NameTag").GetComponent<TextMesh>().text = m.GetString(0);
+                    break;
+
+            }
+        }*/
+        // clear message queue after it's been processed
+        msgList.Clear();
     }
 
     void handlemessage(object sender, Message m)

@@ -1718,6 +1718,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375448747}
   m_CullTransparentMesh: 0
+--- !u!1 &408079077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1358319970182965263, guid: a3562c060958ad845a8c2510defdc014,
+    type: 3}
+  m_PrefabInstance: {fileID: 1727073247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &408079081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408079077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326496eb0532d94394adcca55a46688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy_Tag: enemy
+  Castle_Hitpoint: 5
+--- !u!64 &408079082
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408079077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 43841633152074190, guid: a3562c060958ad845a8c2510defdc014, type: 3}
+--- !u!54 &408079083
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408079077}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &409763461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,41 +2305,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastTab: 0
-  movementSettingsFoldout: 1
+  movementSettingsFoldout: 0
   zoomingSettingsFoldout: 0
-  rotationSettingsFoldout: 1
-  heightSettingsFoldout: 1
-  mapLimitSettingsFoldout: 1
-  targetingSettingsFoldout: 1
-  inputSettingsFoldout: 1
+  rotationSettingsFoldout: 0
+  heightSettingsFoldout: 0
+  mapLimitSettingsFoldout: 0
+  targetingSettingsFoldout: 0
+  inputSettingsFoldout: 0
   useFixedUpdate: 0
   keyboardMovementSpeed: 50
   screenEdgeMovementSpeed: 3
   followingSpeed: 5
-  rotationSped: 300
-  panningSpeed: 10
-  mouseRotationSpeed: 60
+  rotationSped: 50
+  panningSpeed: 50
+  mouseRotationSpeed: 50
   autoHeight: 1
   groundMask:
     serializedVersion: 2
-    m_Bits: 55
-  maxHeight: 50
+    m_Bits: 4294967295
+  maxHeight: 80
   minHeight: 15
-  heightDampening: 3
+  heightDampening: 15
   keyboardZoomingSensitivity: 2
   scrollWheelZoomingSensitivity: 25
   limitMap: 1
-  limitX: 500
-  limitY: 500
+  limitX: 120
+  limitY: 50
   targetFollow: {fileID: 0}
   targetOffset: {x: 0, y: 0, z: 0}
-  useScreenEdgeInput: 0
+  useScreenEdgeInput: 1
   screenEdgeBorder: 25
   useKeyboardInput: 1
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   usePanning: 1
-  panningKey: 323
+  panningKey: 325
   useKeyboardZooming: 1
   zoomInKey: 101
   zoomOutKey: 113
@@ -4335,7 +4385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009287651}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 119, y: 95, z: -22.1}
+  m_LocalPosition: {x: 119, y: 97, z: -22.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}
@@ -4406,12 +4456,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012268709}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 262f53236bddb7d49b7969b6746137a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  person: {fileID: 863550720, guid: 641cc5d198b228040a8f466c4957c598, type: 3}
 --- !u!114 &1012268713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4444,8 +4493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6435690da32e5f43b9f5c8840a89ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPointRed: {x: 56, y: 1.1, z: -73}
-  spawnPointBlue: {x: 56, y: 1.1, z: 73}
+  spawnPointRed: {x: 56.5, y: 0.82, z: -65}
+  spawnPointBlue: {x: 56.5, y: 0.82, z: 75}
   lumberjackRed: {fileID: 5107933363672607933, guid: d0b3394bf9e6d57478c1f8f1b9692300,
     type: 3}
   archerRed: {fileID: 4814309364068988396, guid: 9744c51462d50bc449b418e42ecb857f,
@@ -6012,6 +6061,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377808757}
   m_CullTransparentMesh: 0
+--- !u!1 &1406669509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6085354159954679845, guid: a3562c060958ad845a8c2510defdc014,
+    type: 3}
+  m_PrefabInstance: {fileID: 1727073247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1406669513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406669509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326496eb0532d94394adcca55a46688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy_Tag: hero
+  Castle_Hitpoint: 5
+--- !u!54 &1406669514
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406669509}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &1406669515
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406669509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 43705754445305336, guid: a3562c060958ad845a8c2510defdc014, type: 3}
 --- !u!1 &1418776025
 GameObject:
   m_ObjectHideFlags: 0
@@ -6687,6 +6786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tower-plant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8543324133126054002, guid: c8a9267f9e57a6946b85a1104f669e23,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6741,6 +6845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829823332344844345, guid: c8a9267f9e57a6946b85a1104f669e23,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a9267f9e57a6946b85a1104f669e23, type: 3}
@@ -7697,6 +7806,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: map-ant-test
       objectReference: {fileID: 0}
+    - target: {fileID: 1358319970182965263, guid: a3562c060958ad845a8c2510defdc014,
+        type: 3}
+      propertyPath: m_TagString
+      value: playerCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085354159954679845, guid: a3562c060958ad845a8c2510defdc014,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemyCastle
+      objectReference: {fileID: 0}
     - target: {fileID: 6440057840354779065, guid: a3562c060958ad845a8c2510defdc014,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7751,16 +7870,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1358319970182965263, guid: a3562c060958ad845a8c2510defdc014,
-        type: 3}
-      propertyPath: m_TagString
-      value: playerCastle
-      objectReference: {fileID: 0}
-    - target: {fileID: 6085354159954679845, guid: a3562c060958ad845a8c2510defdc014,
-        type: 3}
-      propertyPath: m_TagString
-      value: castle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3562c060958ad845a8c2510defdc014, type: 3}
@@ -9512,6 +9621,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tower-plant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8543324133126054002, guid: c8a9267f9e57a6946b85a1104f669e23,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9566,6 +9680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829823332344844345, guid: c8a9267f9e57a6946b85a1104f669e23,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8a9267f9e57a6946b85a1104f669e23, type: 3}

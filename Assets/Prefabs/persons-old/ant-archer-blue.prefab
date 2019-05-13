@@ -452,7 +452,7 @@ MonoBehaviour:
   seeDistance: 25
   attackDistance: 20
   speed: 3
-  _tag: hero
+  enemyTag: hero
   coolDown: 2
   InBattle: 0
   UnitName: Archer

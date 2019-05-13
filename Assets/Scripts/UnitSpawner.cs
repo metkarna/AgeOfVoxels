@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayerIOClient;
 
 public class UnitSpawner : MonoBehaviour
 {
@@ -20,56 +21,77 @@ public class UnitSpawner : MonoBehaviour
     public GameObject archerBlue;
     public GameObject spearmanBlue;
     public GameObject swordsmanBlue;
+
+    // Игроки
+    private Player player;
     #endregion
 
+    public void Start(){
+        player = GameObject.FindObjectOfType(typeof(Player)) as Player;
+    }
 
     public void SpawnUnitsRed(string typeOfUnit)
     {
-        // Название нажатой кнопки вызывает создание соответствующиего юнита
-        switch (typeOfUnit)
-        {
-            case "antiqueLumberjackButton":
-                Debug.Log("лесоруб");
-                Instantiate(lumberjackRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
-                break;
-            case "antiqueArcherButton":
-                Debug.Log("лучник");
-                Instantiate(archerRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
-                break;
-            case "antiqueSpearmanButton":
-                Debug.Log("копейщик");
-                Instantiate(spearmanRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
-                break;
-            case "antiqueSwordsmanButton":
-                Debug.Log("мечник");
-                Instantiate(swordsmanRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
-                break;
-
-        }
+        player.pioconnection.Send("tsUnitCreate", typeOfUnit, "red");
     }
 
     public void SpawnUnitsBlue(string typeOfUnit)
     {
-        // Название нажатой кнопки вызывает создание соответствующиего юнита
-        switch (typeOfUnit)
-        {
-            case "antiqueLumberjackButton":
-                Debug.Log("лесоруб");
-                Instantiate(lumberjackBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
-                break;
-            case "antiqueArcherButton":
-                Debug.Log("лучник");
-                Instantiate(archerBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
-                break;
-            case "antiqueSpearmanButton":
-                Debug.Log("копейщик");
-                Instantiate(spearmanBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
-                break;
-            case "antiqueSwordsmanButton":
-                Debug.Log("мечник");
-                Instantiate(swordsmanBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
-                break;
-        }
+        player.pioconnection.Send("tsUnitCreate", typeOfUnit, "blue");
     }
 
+    void FixedUpdate() {
+        // process message queue
+        foreach (Message m in player.msgList) {
+            switch (m.Type) {
+                case "fsUnitCreate":
+                    if(m.GetString(1) == "red")
+                    {
+                        switch (m.GetString(0))
+                        {
+                            case "antiqueLumberjackButton":
+                                Debug.Log("лесоруб");
+                                Instantiate(lumberjackRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
+                                break;
+                            case "antiqueArcherButton":
+                                Debug.Log("лучник");
+                                Instantiate(archerRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
+                                break;
+                            case "antiqueSpearmanButton":
+                                Debug.Log("копейщик");
+                                Instantiate(spearmanRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
+                                break;
+                            case "antiqueSwordsmanButton":
+                                Debug.Log("мечник");
+                                Instantiate(swordsmanRed, spawnPointRed, new Quaternion(0, 0, 0, 0));
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        switch (m.GetString(0))
+                        {
+                            case "antiqueLumberjackButton":
+                                Debug.Log("лесоруб");
+                                Instantiate(lumberjackBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
+                                break;
+                            case "antiqueArcherButton":
+                                Debug.Log("лучник");
+                                Instantiate(archerBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
+                                break;
+                            case "antiqueSpearmanButton":
+                                Debug.Log("копейщик");
+                                Instantiate(spearmanBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
+                                break;
+                            case "antiqueSwordsmanButton":
+                                Debug.Log("мечник");
+                                Instantiate(swordsmanBlue, spawnPointBlue, new Quaternion(0, 0, 0, 0));
+                                break;
+                        }
+                    }
+                    break;
+            }
+        }
+        player.msgList.Clear();
+    }
 }
