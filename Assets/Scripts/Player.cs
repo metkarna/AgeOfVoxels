@@ -4,7 +4,7 @@ using UnityEngine;
 using PlayerIOClient;
 using System;
 
-public class Player : MonoBehaviour
+public class Player : GameController
 {
     public int Gold { get; set; }
 
@@ -21,6 +21,14 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        if(base.red == null){
+            base.red = this;
+        }
+        else{
+            base.blue = this;
+        }
+
+
         /*PlayerIO.Authenticate(gameID, "public", new Dictionary<string, string> { { "userId", "TestUser" }, }, null, SuccessCallback, ErrorCallback);
 
         PlayerIO.Connect(gameID, "public", "user-id", null, null, SuccessCallback, ErrorCallback);*/
