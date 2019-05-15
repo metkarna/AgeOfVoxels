@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         Debug.Log("Starting");
 
         PlayerIO.Authenticate(
-            gameID,            //Your game id
+            gameID,                                 // Your game id
             "public",                               //Your connection id
             new Dictionary<string, string> {        //Authentication arguments
 				{ "userId", userid },
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
                 Debug.Log("Create ServerEndpoint");
                 // Comment out the line below to use the live servers instead of your development server
-                client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
+                //client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
 
                 Debug.Log("CreateJoinRoom");
                 //Create or join the room (Создаем и/или сразу входим в комнату)

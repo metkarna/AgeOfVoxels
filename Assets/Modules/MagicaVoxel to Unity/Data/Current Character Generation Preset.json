@@ -599,7 +599,7 @@
         },
         {
             "Name": "Hair 1",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 9,
             "SizeY": 9,
             "Voxels": [
@@ -1358,7 +1358,7 @@
         },
         {
             "Name": "Cloth",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 3,
             "SizeY": 3,
             "Voxels": [
@@ -1406,7 +1406,7 @@
         },
         {
             "Name": "Sleeve",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 1,
             "SizeY": 1,
             "Voxels": [
@@ -1437,7 +1437,7 @@
         },
         {
             "Name": "Pants",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 1,
             "SizeY": 1,
             "Voxels": [
@@ -1468,7 +1468,7 @@
         },
         {
             "Name": "Shoes",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 1,
             "SizeY": 1,
             "Voxels": [
@@ -1499,7 +1499,7 @@
         },
         {
             "Name": "Body Armor",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 5,
             "SizeY": 6,
             "Voxels": [
@@ -1649,7 +1649,7 @@
         },
         {
             "Name": "Arm Armor",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 3,
             "SizeY": 1,
             "Voxels": [
@@ -1682,7 +1682,7 @@
         },
         {
             "Name": "Leg Armor",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 1,
             "SizeY": 3,
             "Voxels": [
@@ -1718,7 +1718,7 @@
         },
         {
             "Name": "Helmet",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 5,
             "SizeY": 4,
             "Voxels": [
@@ -1848,7 +1848,7 @@
         },
         {
             "Name": "Eye 0 L",
-            "Visible": true,
+            "Visible": false,
             "SizeX": 1,
             "SizeY": 2,
             "Voxels": [
@@ -1880,7 +1880,7 @@
         },
         {
             "Name": "Eye 0 R",
-            "Visible": true,
+            "Visible": false,
             "SizeX": 1,
             "SizeY": 2,
             "Voxels": [
@@ -1912,7 +1912,7 @@
         },
         {
             "Name": "Eye 1 L",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 1,
             "SizeY": 2,
             "Voxels": [
@@ -1944,7 +1944,7 @@
         },
         {
             "Name": "Eye 1 R",
-            "Visible": false,
+            "Visible": true,
             "SizeX": 1,
             "SizeY": 2,
             "Voxels": [
