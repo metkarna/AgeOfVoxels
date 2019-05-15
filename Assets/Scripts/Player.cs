@@ -4,7 +4,7 @@ using UnityEngine;
 using PlayerIOClient;
 using System;
 
-public class Player : GameController
+public class Player : MonoBehaviour
 {
     public int Gold { get; set; }
 
@@ -21,13 +21,6 @@ public class Player : GameController
 
     private void Start()
     {
-        if(base.red == null){
-            base.red = this;
-        }
-        else{
-            base.blue = this;
-        }
-
 
         /*PlayerIO.Authenticate(gameID, "public", new Dictionary<string, string> { { "userId", "TestUser" }, }, null, SuccessCallback, ErrorCallback);
 
@@ -52,7 +45,7 @@ public class Player : GameController
 
                 Debug.Log("Create ServerEndpoint");
                 // Comment out the line below to use the live servers instead of your development server
-                client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
+                //client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
 
                 Debug.Log("CreateJoinRoom");
                 //Create or join the room (Создаем и/или сразу входим в комнату)
