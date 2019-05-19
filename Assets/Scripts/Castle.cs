@@ -11,23 +11,30 @@ public class Castle : MonoBehaviour
     private Player player;
     private UIController ui;
 
-    // private void Start()
-    // {
-    //     player = GameObject.FindObjectOfType(typeof(Player)) as Player;
+     private void Start()
+     {
+         player = GameObject.FindObjectOfType(typeof(Player)) as Player;
         
-    // }
+     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        string msg;
+        if (collision.gameObject.tag == Enemy_Tag)
         {
-            Debug.Log("Хуяк по замку");
             Destroy(collision.gameObject);
             Castle_Hitpoint--;
             if (Castle_Hitpoint == 0)
             {
                 ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
-                string msg = gameObject.tag == "enemyCastle" ? "Победа :)": "Поражение :(";
+                if (player.UserColor == "red")
+                {
+                    msg = gameObject.tag == "enemyCastle" ? "Победа :)" : "Поражение :(";
+                }
+                else
+                {
+                    msg = gameObject.tag == "playerCastle" ? "Победа :)" : "Поражение :(";
+                }
                 ui.CastleDestroy(msg);
                 Destroy(gameObject);
             }

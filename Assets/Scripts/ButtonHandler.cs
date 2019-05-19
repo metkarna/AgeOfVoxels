@@ -57,7 +57,11 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
     {
         var ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
         var unitSpawner = GameObject.FindObjectOfType(typeof(UnitSpawner)) as UnitSpawner;
-		unitSpawner.SpawnUnitsBlue(_eventData);
+        var goldController = GameObject.FindObjectOfType(typeof(GoldConroller)) as GoldConroller;
+        if (goldController.BuyUnit(_eventData))
+        {
+            unitSpawner.SpawnUnitsBlue(_eventData);
+        }
     }
     #endregion
 

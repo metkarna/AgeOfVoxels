@@ -14,6 +14,10 @@ public class UIController : MonoBehaviour
     public GameObject pauseGameMenu;
     public GameObject endGameMenu;
     public GameObject goldUI;
+
+    public GameObject btnRed;
+    public GameObject btnBlue;
+
     private Text goldValue;
     public bool isFrozen = false;
 

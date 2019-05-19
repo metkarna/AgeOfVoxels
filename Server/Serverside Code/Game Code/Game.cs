@@ -5,8 +5,7 @@ using PlayerIO.GameLibrary;
 namespace MushroomsUnity3DExample {
     // Игрок, отнаследованный от базового
     public class Player : BasePlayer {
-        public bool red = false;
-        public bool blue = false;
+        public string color;
 	}
 
     // Тип комнаты
@@ -15,7 +14,7 @@ namespace MushroomsUnity3DExample {
         private Player red = null;
         private Player blue = null; 
 
-		// This method is called when an instance of your the game is created
+		// This method is called when an instance of your t9he game is created
 		public override void GameStarted() {
 			Console.WriteLine("Game is started: " + RoomId);
 		}
@@ -27,14 +26,24 @@ namespace MushroomsUnity3DExample {
 
 		// Вызываем, когда игрок заходит в игру
 		public override void UserJoined(Player player) {
-            foreach (Player pl in Players)
-            {
-                if (pl.ConnectUserId != player.ConnectUserId)
-                {
-                    if (red == null) red = player;
-                    else blue = player;
-                }
-            }
+            //foreach (Player pl in Players)
+            //{
+                //if (pl.ConnectUserId != player.ConnectUserId)
+                //{
+                    if (red == null)
+                    {
+                        red = player;
+                        player.color = "red";
+                        player.Send("fsUserColor", player.color);
+                    }
+                    else
+                    {
+                        blue = player;
+                        player.color = "blue";
+                        player.Send("fsUserColor", player.color);
+                    }
+                //}
+            //}
         }
 
 		// Вызываем, когда игрок выходит из игры

@@ -24,6 +24,7 @@ public class UnitSpawner : MonoBehaviour
 
     // Игроки
     private Player player;
+    private UIController ui;
     #endregion
 
     public void Start(){
@@ -46,6 +47,16 @@ public class UnitSpawner : MonoBehaviour
             switch (m.Type) {
                 case "fsUserColor":
                     player.UserColor = m.GetString(0);
+                    ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+                    if (player.UserColor == "red")
+                    {
+                        ui.btnRed.SetActive(true);
+                    }
+                    else
+                    {
+                        ui.btnBlue.SetActive(true);
+                    }
+
                     Debug.Log("User color is " + player.UserColor);
                     break;
                 case "fsUnitCreate":

@@ -22,12 +22,13 @@ public class Unit : MonoBehaviour
     protected Animator _anim;
     protected object[] data;
     protected float AttackTimer = 0;
-    
+    protected Player player;
 
 
     // Start is called before the first frame update
     protected void Start()
     {
+        player = GameObject.FindObjectOfType(typeof(Player)) as Player;
         _Objects = GameObject.FindGameObjectsWithTag(enemyTag);
         foreach (var item in _Objects)
         {
