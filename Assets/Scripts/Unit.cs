@@ -9,7 +9,7 @@ public class Unit : MonoBehaviour
     public int health;
     public float seeDistance;
     public float attackDistance;
-    public float speed;
+    public float speed = 7f;
     public string enemyTag;
     public float coolDown;
     public bool InBattle;

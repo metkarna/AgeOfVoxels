@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     private string gameID = "ageofvoxels-rngqg9j7r06969qdooho7w";
 
+    public string UserColor;
+
     public List<Message> msgList = new List<Message>(); //  Messsage queue implementation
     private bool joinedroom = false;
     public Connection pioconnection;
@@ -21,7 +23,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-
         /*PlayerIO.Authenticate(gameID, "public", new Dictionary<string, string> { { "userId", "TestUser" }, }, null, SuccessCallback, ErrorCallback);
 
         PlayerIO.Connect(gameID, "public", "user-id", null, null, SuccessCallback, ErrorCallback);*/
@@ -32,7 +33,7 @@ public class Player : MonoBehaviour
         Debug.Log("Starting");
 
         PlayerIO.Authenticate(
-            gameID,            //Your game id
+            gameID,                                 // Your game id
             "public",                               //Your connection id
             new Dictionary<string, string> {        //Authentication arguments
 				{ "userId", userid },
@@ -45,7 +46,7 @@ public class Player : MonoBehaviour
 
                 Debug.Log("Create ServerEndpoint");
                 // Comment out the line below to use the live servers instead of your development server
-                //client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
+                client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
 
                 Debug.Log("CreateJoinRoom");
                 //Create or join the room (Создаем и/или сразу входим в комнату)

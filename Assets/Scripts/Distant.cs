@@ -48,7 +48,7 @@ public class Distant : Unit
                         navMesh.isStopped = false;
                     }
                 }*/
-                navMesh.speed = 3.5f;
+                navMesh.speed = speed;
             }
         }
 
@@ -62,7 +62,7 @@ public class Distant : Unit
                     //transform.Translate(new Vector3(0, 0, 0));
                     
                     _anim.SetBool("Walk", true);
-                    navMesh.speed = 3.5f;
+                    navMesh.speed = speed;
                 }
                 else
                 {
@@ -89,7 +89,7 @@ public class Distant : Unit
                         navMesh.isStopped = false;
                     }
                 }*/
-                navMesh.speed = 3.5f;
+                navMesh.speed = speed;
             }
         }
         else

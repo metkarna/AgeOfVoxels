@@ -11,36 +11,38 @@ public class Castle : MonoBehaviour
     private Player player;
     private UIController ui;
 
-    private void Start()
-    {
-        player = GameObject.FindObjectOfType(typeof(Player)) as Player;
-        ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
-    }
+    // private void Start()
+    // {
+    //     player = GameObject.FindObjectOfType(typeof(Player)) as Player;
+        
+    // }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == Enemy_Tag)
+        if (collision.gameObject.tag == "enemy")
         {
+            Debug.Log("Хуяк по замку");
             Destroy(collision.gameObject);
-            player.pioconnection.Send("tsCastleHP");
+            Castle_Hitpoint--;
+            if (Castle_Hitpoint == 0)
+            {
+                ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+                string msg = gameObject.tag == "enemyCastle" ? "Победа :)": "Поражение :(";
+                ui.CastleDestroy(msg);
+                Destroy(gameObject);
+            }
+            //player.pioconnection.Send("tsCastleHP");
         }
     }
 
-    void FixedUpdate() {
-        // process message queue
-        foreach (Message m in player.msgList) {
-            switch (m.Type) {
-                case "fsCastleHP":
-                    Castle_Hitpoint--;
-                    if (Castle_Hitpoint == 0)
-                    {
-                        string msg = gameObject.tag == "enemyCastle" ? "Победа :)": "Поражение :(";
-                        ui.CastleDestroy(msg);
-                        Destroy(gameObject);
-                    }
-                    break;
-            }
-        }
-        //player.msgList.Clear();
-    }
+    // void FixedUpdate() {
+    //     // process message queue
+    //     foreach (Message m in player.msgList) {
+    //         switch (m.Type) {
+    //             case "fsCastleHP":
+    //                 break;
+    //         }
+    //     }
+    //     //player.msgList.Clear();
+    // }
 }

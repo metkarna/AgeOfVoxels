@@ -44,6 +44,10 @@ public class UnitSpawner : MonoBehaviour
         // process message queue
         foreach (Message m in player.msgList) {
             switch (m.Type) {
+                case "fsUserColor":
+                    player.UserColor = m.GetString(0);
+                    Debug.Log("User color is " + player.UserColor);
+                    break;
                 case "fsUnitCreate":
                     if(m.GetString(1) == "red")
                     {

@@ -15,7 +15,7 @@ namespace MushroomsUnity3DExample {
         private Player red = null;
         private Player blue = null; 
 
-		// This method is called when an instance of your t9he game is created
+		// This method is called when an instance of your the game is created
 		public override void GameStarted() {
 			Console.WriteLine("Game is started: " + RoomId);
 		}

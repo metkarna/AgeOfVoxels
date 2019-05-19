@@ -32,7 +32,7 @@ public class GoldConroller : MonoBehaviour
     {
         // Дать игроку золото
        player.Gold += 3;
-       Debug.Log("Player received 3 gold");
+       //Debug.Log("Player received 3 gold");
     }
     public bool BuyUnit(string typeOfUnit)
     {
