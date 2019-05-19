@@ -120,14 +120,14 @@ public class Melee : Unit
              Destroy (gameObject, this.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
             if (base.player.UserColor == "red")
             {
-                if ((string)data[0] == "hero")
+                if ((string)data[0] == "redUnit")
                 {
                     goldConroller.KillTrophy(UnitName);
                 }
             }
             else
             {
-                if ((string)data[0] == "enemy")
+                if ((string)data[0] == "blueUnit")
                 {
                     goldConroller.KillTrophy(UnitName);
                 }

@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 5107933363672705565}
   m_Layer: 0
   m_Name: ant-axes-red
-  m_TagString: hero
+  m_TagString: redUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,11 +636,11 @@ MonoBehaviour:
   seeDistance: 25
   attackDistance: 5
   speed: 7
-  enemyTag: enemy
+  enemyTag: blueUnit
   coolDown: 1
   InBattle: 0
   UnitName: Lumberjack
-  EnemyCastleTag: enemyCastle
+  EnemyCastleTag: blueCastle
 --- !u!1 &5107933363672607935
 GameObject:
   m_ObjectHideFlags: 0

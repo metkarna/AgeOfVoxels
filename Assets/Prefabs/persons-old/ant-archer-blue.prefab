@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 8636907088973897017}
   m_Layer: 0
   m_Name: ant-archer-blue
-  m_TagString: enemy
+  m_TagString: blueUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,13 +452,13 @@ MonoBehaviour:
   seeDistance: 25
   attackDistance: 20
   speed: 7
-  enemyTag: hero
+  enemyTag: redUnit
   coolDown: 2
   InBattle: 0
   UnitName: Archer
   arrowPrefab: {fileID: 1845796729819682827, guid: c0f45af2bacf2c74e833c03d4a7611af,
     type: 3}
-  EnemyCastleTag: playerCastle
+  EnemyCastleTag: redCastle
 --- !u!1 &8636907088973798297
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,10 @@ TagManager:
   - playerCastle
   - endGameMessage
   - enemyCastle
+  - redCastle
+  - blueCastle
+  - redUnit
+  - blueUnit
   layers:
   - Default
   - TransparentFX
