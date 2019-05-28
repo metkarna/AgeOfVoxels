@@ -29,11 +29,11 @@ public class Castle : MonoBehaviour
                 ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
                 if (player.UserColor == "red")
                 {
-                    msg = gameObject.tag == "enemyCastle" ? "Победа :)" : "Поражение :(";
+                    msg = gameObject.tag == "blueCastle" ? "Победа :)" : "Поражение :(";
                 }
                 else
                 {
-                    msg = gameObject.tag == "playerCastle" ? "Победа :)" : "Поражение :(";
+                    msg = gameObject.tag == "redCastle" ? "Победа :)" : "Поражение :(";
                 }
                 ui.CastleDestroy(msg);
                 Destroy(gameObject);

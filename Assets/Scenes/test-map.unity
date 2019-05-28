@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326496eb0532d94394adcca55a46688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_Tag: enemy
+  Enemy_Tag: blueUnit
   Castle_Hitpoint: 5
 --- !u!64 &408079082
 MeshCollider:
@@ -1764,9 +1764,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!1 &409763461
 GameObject:
@@ -3365,7 +3365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &770431668
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3383,7 +3383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: 0}
+  m_AnchoredPosition: {x: -80, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770431669
@@ -4480,6 +4480,8 @@ MonoBehaviour:
   pauseGameMenu: {fileID: 90857983}
   endGameMenu: {fileID: 1996097186}
   goldUI: {fileID: 8574564412754442765}
+  btnRed: {fileID: 1427205099}
+  btnBlue: {fileID: 770431667}
   isFrozen: 0
 --- !u!114 &1012268714
 MonoBehaviour:
@@ -6080,7 +6082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c326496eb0532d94394adcca55a46688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_Tag: hero
+  Enemy_Tag: redUnit
   Castle_Hitpoint: 5
 --- !u!54 &1406669514
 Rigidbody:
@@ -6094,9 +6096,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!64 &1406669515
 MeshCollider:
@@ -6109,7 +6111,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 43705754445305336, guid: a3562c060958ad845a8c2510defdc014, type: 3}
 --- !u!1 &1418776025
@@ -6210,7 +6212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1427205100
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6830,7 +6832,7 @@ PrefabInstance:
     - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
         type: 3}
@@ -7810,12 +7812,12 @@ PrefabInstance:
     - target: {fileID: 1358319970182965263, guid: a3562c060958ad845a8c2510defdc014,
         type: 3}
       propertyPath: m_TagString
-      value: playerCastle
+      value: redCastle
       objectReference: {fileID: 0}
     - target: {fileID: 6085354159954679845, guid: a3562c060958ad845a8c2510defdc014,
         type: 3}
       propertyPath: m_TagString
-      value: enemyCastle
+      value: blueCastle
       objectReference: {fileID: 0}
     - target: {fileID: 6440057840354779065, guid: a3562c060958ad845a8c2510defdc014,
         type: 3}
@@ -9665,7 +9667,7 @@ PrefabInstance:
     - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3476342012547871075, guid: c8a9267f9e57a6946b85a1104f669e23,
         type: 3}

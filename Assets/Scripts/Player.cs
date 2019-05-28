@@ -46,16 +46,20 @@ public class Player : MonoBehaviour
 
                 Debug.Log("Create ServerEndpoint");
                 // Comment out the line below to use the live servers instead of your development server
-                //client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
+                client.Multiplayer.DevelopmentServer = new ServerEndpoint("localhost", 8184);
 
                 Debug.Log("CreateJoinRoom");
                 //Create or join the room (Создаем и/или сразу входим в комнату)
                 client.Multiplayer.CreateJoinRoom(
                     "UnityDemoRoom",                    //Room id. If set to null a random roomid is used
                     "UnityMushrooms",                   //The room type started on the server
-                    true,                               //Should the room be visible in the lobby?
-                    null,
-                    null,
+                    false,                               //Should the room be visible in the lobby?
+                    new Dictionary<string, string> {        
+				        { "maxplayers", "2" },
+                    },
+                    new Dictionary<string, string> {        
+				        { "Name", "Old" },
+                    },
                     delegate (Connection connection) {
                         Debug.Log("Joined Room.");
                         infomsg = "Joined Room.";
