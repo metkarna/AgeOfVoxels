@@ -86,6 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025795138303474424}
+  - component: {fileID: -1929189113509111956}
   m_Layer: 0
   m_Name: ant-towers-barack-blue
   m_TagString: Untagged
@@ -108,6 +109,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1929189113509111956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986010772743174118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 155e4648d1c7717448a69e67764b2580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyTag: redUnit
 --- !u!43 &-3288711953493426286
 Mesh:
   m_ObjectHideFlags: 0

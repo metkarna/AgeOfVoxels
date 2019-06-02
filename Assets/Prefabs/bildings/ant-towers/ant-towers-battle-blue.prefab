@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8365640557918392576}
+  - component: {fileID: 3380261932333919539}
   m_Layer: 0
   m_Name: ant-towers-battle-blue
   m_TagString: Untagged
@@ -31,6 +32,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3380261932333919539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304147695791800609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d25a20b38820be40b94b10d843f51d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyTag: redUnit
+  attackDistance: 50
+  coolDown: 1
+  arrowPrefab: {fileID: 1845796729819682827, guid: c0f45af2bacf2c74e833c03d4a7611af,
+    type: 3}
 --- !u!1 &6483061079941879851
 GameObject:
   m_ObjectHideFlags: 0

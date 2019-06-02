@@ -121,7 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64fd1b3709441d4bb9660d6a21810fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyTag: 
+  EnemyTag: blueUnit
+  Unit: {fileID: 5107933363672607933, guid: d0b3394bf9e6d57478c1f8f1b9692300, type: 3}
+  coolDown: 10
 --- !u!21 &-8835085612463374920
 Material:
   serializedVersion: 6

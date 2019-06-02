@@ -38,7 +38,8 @@ public class Player : MonoBehaviour
             new Dictionary<string, string> {        //Authentication arguments
 				{ "userId", userid },
             },
-            null,                                   //PlayerInsight segments
+            null,                                 
+            //PlayerInsight segments
             delegate (Client client) {
                 Debug.Log("Successfully connected to Player.IO");
                 infomsg = "Successfully connected to Player.IO";

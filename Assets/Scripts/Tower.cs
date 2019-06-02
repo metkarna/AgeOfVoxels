@@ -16,13 +16,6 @@ public class Tower : MonoBehaviour
     {
         player = GameObject.FindObjectOfType(typeof(Player)) as Player;
         PlayerColor = player.UserColor;
-        if (PlayerColor == "red")
-        {
-            EnemyTag = "blueUnit";
-        }
-        else{
-            EnemyTag = "redUnit";
-        }
     }
 
     // Update is called once per frame

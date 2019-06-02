@@ -23,12 +23,8 @@ public class ArrowController : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-       // if (col.gameObject.tag == "Enemy")
-       // {
-            transform.parent = col.transform;
-            Destroy(this.gameObject);
-        //}
-        
+        transform.parent = col.transform;
+        Destroy(this.gameObject);   
     }
 
 
