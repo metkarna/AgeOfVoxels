@@ -14,11 +14,15 @@ public class UIController : MonoBehaviour
     public GameObject pauseGameMenu;
     public GameObject endGameMenu;
     public GameObject goldUI;
+    public GameObject redCastleHPUI;
+    public GameObject blueCastleHPUI;
 
     public GameObject btnRed;
     public GameObject btnBlue;
 
     private Text goldValue;
+    private Text redCastleHPValue;
+    private Text blueCastleHPValue;
     public bool isFrozen = false;
 
 
@@ -27,6 +31,8 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         goldValue = goldUI.GetComponent<Text>();
+        redCastleHPValue = redCastleHPUI.GetComponent<Text>();
+        blueCastleHPValue = blueCastleHPUI.GetComponent<Text>();
         SetUnitsPrice();
         Debug.Log("value is inited");
         player = GameObject.FindObjectOfType(typeof(Player)) as Player;
@@ -60,6 +66,19 @@ public class UIController : MonoBehaviour
     private void RenewPlayerGoldText()
     {
         goldValue.text = "Золото: " + player.Gold.ToString();
+    }
+
+    public void RenewCastleHPText(string color, int hp)
+    {
+        switch (color)
+        {
+            case "red":
+                redCastleHPValue.text = "Красный: " + hp.ToString();
+                break; 
+            case "blue":
+                blueCastleHPValue.text = "Синий: " + hp.ToString();
+                break;  
+        }      
     }
 
     // Если замок уничтожен, вызываем окошко конца игры.

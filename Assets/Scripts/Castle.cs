@@ -24,9 +24,12 @@ public class Castle : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Castle_Hitpoint--;
+            ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
+            if (this.tag == "redCastle") ui.RenewCastleHPText("red", Castle_Hitpoint);
+            if (this.tag == "blueCastle") ui.RenewCastleHPText("blue", Castle_Hitpoint);
+            
             if (Castle_Hitpoint == 0)
             {
-                ui = GameObject.FindObjectOfType(typeof(UIController)) as UIController;
                 if (player.UserColor == "red")
                 {
                     msg = gameObject.tag == "blueCastle" ? "Победа :)" : "Поражение :(";
