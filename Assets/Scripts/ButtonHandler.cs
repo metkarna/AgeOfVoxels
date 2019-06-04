@@ -144,6 +144,9 @@ public class ButtonHandler : MonoBehaviour, IPointerClickHandler
                 Debug.Log("Открытие сцены: Уровни");
                 SceneManager.LoadScene("Options");
                 break;
+            case "btnGoAuth":
+                SceneManager.LoadScene("Auth");
+                break;
             case "btnExit":
                 Debug.Log("Закрытие игры");
                 //UnityEditor.EditorApplication.isPlaying = false;
